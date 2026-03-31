@@ -1,0 +1,42 @@
+[
+  {
+    "id": "pot-restricted-mod",
+    "patternSource": "The mod is restricted to specific hosts\\.\",\"error\":\"E_INVALID_MOD_HOST",
+    "message": "You have a restricted mod on your server. Please review your mods and remove the restrictions in order for your server to list!",
+    "severity": "error",
+    "helpUrl": "",
+    "games": [
+      "path-of-titans"
+    ]
+  },
+  {
+    "id": "pot-discord-link",
+    "patternSource": "Discord Invite Tag is Invalid",
+    "message": "Please review your Discord link; it should only be the code, not the whole link!",
+    "severity": "warning",
+    "helpUrl": "",
+    "games": [
+      "path-of-titans"
+    ]
+  },
+  {
+    "id": "pot-rcon-pass",
+    "patternSource": "RCON Password is too short",
+    "message": "Please check your RCON password as it needs to be at least 8 characters long, the longer the better!",
+    "severity": "warning",
+    "helpUrl": "",
+    "games": [
+      "path-of-titans"
+    ]
+  },
+  {
+    "id": "pot-auth-token",
+    "patternSource": "Failed to Authenticate\\. Please make sure you are using valid authentication token or username / password that owns the game\\.",
+    "message": "Failed to Authenticate. Please make sure you are using a valid authentication token. Please go make a new one ",
+    "severity": "error",
+    "helpUrl": "https://alderongames.com/oauth/hosting-token",
+    "games": [
+      "path-of-titans"
+    ]
+  }
+]

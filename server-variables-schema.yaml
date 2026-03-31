@@ -1,0 +1,45 @@
+serverVariables:
+  - property: SERVER_NAME
+    label: Server Name
+    type: text
+    default: Hosted by GSH
+    helptext: Sets the name for the server
+    accordion: General Server Settings
+    order: 0
+    accordionOrder: 0
+    fullWidth: true
+  - property: SLOTS
+    label: Player Slots
+    type: number
+    default: ""
+    helptext: Max player slots on the server
+    accordion: General Server Settings
+    step: 1
+    order: 1
+    accordionOrder: 0
+    fullWidth: false
+  - accordion: General Server Settings
+    subheader: ""
+    property: SERVER_PASSWORD
+    label: Server Password
+    type: text
+    repeatable: false
+    default: ""
+    helpText: Sets a password to enter the server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 2
+    accordionOrder: 0
+    helptext: Sets a password to enter the server.
+  - accordion: General Server Settings
+    subheader: ""
+    property: DISCORD
+    label: Server Discord
+    type: text
+    repeatable: false
+    default: gsh
+    helpText: Specifies the connected community Discord server. This must be only
+      the letters/numbers after the discord.gg part of the server invite link.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 4
+    accordionOrder: 0
+    helptext: Add your Discord link so players can connect to your Discord server!
