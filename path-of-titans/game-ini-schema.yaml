@@ -651,7 +651,7 @@ settings:
     label: Lose Growth Past Growth Stages
     type: checkbox
     repeatable: false
-    default: true
+    default: false
     helpText: Allows players to lose growth past Juvenile/Adolescent/Sub-Adult/Adult
       growth states when they die.
     section: "[/Script/PathOfTitans.IGameSession]"
