@@ -76,8 +76,7 @@ settings:
       - Island
       - Panjura
       - Riparia
-#
-#
+###################################################
   - accordion: General Server Settings
     subheader: ""
     property: ServerFootprintLifetime=
@@ -92,6 +91,7 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 5
     accordionOrder: 0
+###################################################
   - accordion: General Server Settings
     subheader: ""
     property: ReservedSlots=
@@ -106,6 +106,7 @@ settings:
     order: 6
     accordionOrder: 0
     fullWidth: false
+###################################################
   - accordion: General Server Settings
     subheader: ""
     property: bServerNameTags=
@@ -118,6 +119,7 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 7
     accordionOrder: 0
+###################################################
   - accordion: General Server Settings
     subheader: ""
     property: bServerFallDamage=
@@ -130,6 +132,7 @@ settings:
     order: 8
     accordionOrder: 0
     fullWidth: true
+###################################################
   - accordion: General Server Settings
     subheader: ""
     property: bServerAllowAnselMultiplayerPausing=
