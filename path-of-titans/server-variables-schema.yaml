@@ -1,3 +1,35 @@
+# ═══════════════════════════════════════════════════════════════
+# Path of Titans — Server Variables Schema
+# ═══════════════════════════════════════════════════════════════
+# These are Pterodactyl startup variables (not Game.ini settings).
+# They configure the server environment before the game launches.
+#
+# ───────────────────────────────────────────────────────────────
+# Field Legend
+# ───────────────────────────────────────────────────────────────
+#
+# REQUIRED FIELDS:
+#   property        Variable name (e.g. SERVER_NAME, SLOTS)
+#   label           Display name shown in the panel UI
+#   type            Input type — one of:
+#                     text      Free-text input
+#                     number    Numeric input (use step to set increment)
+#   default         Default value
+#   accordion       UI group name
+#   accordionOrder  Display order of the group (0 = first)
+#   order           Display order within the group (0 = first)
+#
+# OPTIONAL FIELDS:
+#   helptext        Help description shown to the user
+#   step            Increment step (number type only)
+#   fullWidth       Force full-width layout in UI (true/false)
+#   repeatable      Can appear multiple times (true/false)
+#   section         INI section (if applicable)
+#
+# ═══════════════════════════════════════════════════════════════
+# Total: 4 variables
+# ═══════════════════════════════════════════════════════════════
+
 serverVariables:
   - property: SERVER_NAME
     label: Server Name

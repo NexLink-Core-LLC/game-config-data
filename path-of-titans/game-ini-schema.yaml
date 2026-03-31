@@ -1,17 +1,83 @@
+# ═══════════════════════════════════════════════════════════════
+# Path of Titans — Game.ini Configuration Schema
+# ═══════════════════════════════════════════════════════════════
+# This file defines every setting available in the Game.ini
+# visual editor on the NexLink Core Panel. Each entry maps to
+# an INI property on the game server.
+#
+# ───────────────────────────────────────────────────────────────
+# Field Legend
+# ───────────────────────────────────────────────────────────────
+#
+# REQUIRED FIELDS:
+#   property        INI property name (e.g. ServerMap, bServerGrowth=)
+#   label           Display name shown in the panel UI
+#   type            Input type — one of:
+#                     text      Free-text input
+#                     number    Numeric input (use min/max/step to constrain)
+#                     checkbox  Boolean toggle (true/false)
+#                     select    Dropdown menu (requires "options" list)
+#   default         Default value when the setting is not explicitly set
+#   section         INI file section header
+#                     e.g. "[/Script/PathOfTitans.IGameSession]"
+#   accordion       UI group name — settings are grouped under this heading
+#   accordionOrder  Display order of the group (0 = first group shown)
+#   order           Display order within the group (0 = first setting)
+#
+# OPTIONAL FIELDS:
+#   helpText        Help description shown to the user
+#   subheader       Sub-group label within an accordion
+#   min             Minimum value (number type only)
+#   max             Maximum value (number type only)
+#   step            Increment step (number type only, e.g. 1 for integers)
+#   options         List of allowed values (select type only)
+#   repeatable      Can this setting appear multiple times (true/false)
+#   fullWidth       Force full-width layout in UI (true/false)
+#   dependsOn       Only show this setting when another setting is enabled
+#                     e.g. dependsOn: bServerDynamicTimeOfDay
+#
+# ───────────────────────────────────────────────────────────────
+# Sections
+# ───────────────────────────────────────────────────────────────
+#  1. General Server Settings
+#  2. Quest System Settings
+#  3. Waystone Settings
+#  4. Chat & Communication
+#  5. Map & Navigation
+#  6. Whitelist & Permissions
+#  7. Growth & Survival
+#  8. Nesting & Family System
+#  9. Death & Respawn
+# 10. Critters & Burrows
+# 11. Home Cave
+# 12. Player Lifecycle & Security
+# 13. Character Management
+# 14. Weather System
+# 15. Water & Environmental Systems
+# 16. Network Settings
+# ═══════════════════════════════════════════════════════════════
+
+
+# ═══════════════════════════════════════════════════════════════
+# General Server Settings
+# ═══════════════════════════════════════════════════════════════
 settings:
-  - property: ServerMap
+  - accordion: General Server Settings
+    subheader: ""
+    property: ServerMap
     label: Server Map
-    type: select
-    default: Panjura
+    default: Island
     helptext: The map the server will load with.
     section: "[/Script/PathOfTitans.IGameSession]"
-    accordion: General Server Settings
     order: 3
     accordionOrder: 0
+    type: select
     options:
       - Island
       - Panjura
       - Riparia
+#
+#
   - accordion: General Server Settings
     subheader: ""
     property: ServerFootprintLifetime=
@@ -94,6 +160,7 @@ settings:
     order: 10
     accordionOrder: 0
     dependsOn: bServerAllowAnselMultiplayerPausing=
+  # --- Time of Day ---
   - accordion: General Server Settings
     subheader: Time of Day
     property: bServerDynamicTimeOfDay=
@@ -149,6 +216,10 @@ settings:
     section: "[/Script/PathOfTitans.IGameMode]"
     order: 14
     accordionOrder: 0
+  # ═══════════════════════════════════════════════════════════════
+  # Quest System Settings (15 settings)
+  # ═══════════════════════════════════════════════════════════════
+  # --- Quests In Location ---
   - accordion: Quest System Settings
     subheader: Quests In Location
     property: bOverrideMaxCompleteQuestsInLocation=
@@ -208,6 +279,7 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 4
     accordionOrder: 1
+  # --- Trophy Quest ---
   - accordion: Quest System Settings
     subheader: Trophy Quest
     property: bOverrideTrophyQuestCooldown=
@@ -232,6 +304,7 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 6
     accordionOrder: 1
+  # --- Local Quest ---
   - accordion: Quest System Settings
     subheader: Local Quest
     property: bOverrideLocalQuestCooldown=
@@ -255,6 +328,7 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 8
     accordionOrder: 1
+  # --- Location Quest ---
   - accordion: Quest System Settings
     subheader: Location Quest
     property: bOverrideLocationQuestCooldown=
@@ -326,6 +400,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 14
     accordionOrder: 1
+  # ═══════════════════════════════════════════════════════════════
+  # Waystone Settings (4 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Waystone Settings
     subheader: ""
     property: bServerWaystones=
@@ -375,6 +452,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 3
     accordionOrder: 2
+  # ═══════════════════════════════════════════════════════════════
+  # Chat & Communication (3 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Chat & Communication
     subheader: ""
     property: bServerAllowChat=
@@ -408,6 +488,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 2
     accordionOrder: 3
+  # ═══════════════════════════════════════════════════════════════
+  # Map & Navigation (7 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Map & Navigation
     subheader: ""
     property: bServerAllowMap=
@@ -453,6 +536,7 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 3
     accordionOrder: 4
+  # --- Popular Locations ---
   - accordion: Map & Navigation
     subheader: Popular Locations
     property: bServerShowMapIconPopularLocation=
@@ -477,6 +561,7 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 5
     accordionOrder: 4
+  # --- Spawns ---
   - accordion: Map & Navigation
     subheader: Spawns
     property: FurthestSpawnInclusionRadius=
@@ -490,6 +575,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameMode]"
     order: 6
     accordionOrder: 4
+  # ═══════════════════════════════════════════════════════════════
+  # Whitelist & Permissions (2 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Whitelist & Permissions
     subheader: ""
     property: bEnforceWhitelist=
@@ -513,6 +601,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 1
     accordionOrder: 5
+  # ═══════════════════════════════════════════════════════════════
+  # Growth & Survival (17 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Growth & Survival
     subheader: ""
     property: bServerGrowth=
@@ -675,6 +766,7 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 12
     accordionOrder: 6
+  # --- Grouping Rules ---
   - accordion: Growth & Survival
     subheader: Grouping Rules
     property: bServerRestrictCarnivoreGrouping=
@@ -726,6 +818,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameMode]"
     order: 16
     accordionOrder: 6
+  # ═══════════════════════════════════════════════════════════════
+  # Nesting & Family System (35 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Nesting & Family System
     subheader: ""
     property: bServerNesting=
@@ -1182,6 +1277,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 33
     accordionOrder: 7
+  # ═══════════════════════════════════════════════════════════════
+  # Death & Respawn (8 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Death & Respawn
     subheader: ""
     property: bPermaDeath=
@@ -1288,6 +1386,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 7
     accordionOrder: 8
+  # ═══════════════════════════════════════════════════════════════
+  # Critters & Burrows (4 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Critters & Burrows
     subheader: ""
     property: bServerCritters=
@@ -1336,6 +1437,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 3
     accordionOrder: 9
+  # ═══════════════════════════════════════════════════════════════
+  # Home Cave (8 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Home Cave
     subheader: ""
     property: bServerHomeCaves=
@@ -1432,6 +1536,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 7
     accordionOrder: 10
+  # ═══════════════════════════════════════════════════════════════
+  # Player Lifecycle & Security (9 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Player Lifecycle & Security
     subheader: ""
     property: bServerEditAbilitiesWhileSleeping=
@@ -1553,6 +1660,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 8
     accordionOrder: 11
+  # ═══════════════════════════════════════════════════════════════
+  # Character Management (2 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Character Management
     subheader: ""
     property: MaxCharactersPerPlayer=
@@ -1579,6 +1689,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 1
     accordionOrder: 12
+  # ═══════════════════════════════════════════════════════════════
+  # Weather System (2 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Weather System
     subheader: ""
     property: bOverrideWeather=
@@ -1601,6 +1714,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 1
     accordionOrder: 13
+  # ═══════════════════════════════════════════════════════════════
+  # Water & Environmental Systems (8 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Water & Environmental Systems
     subheader: ""
     property: bServerWaterQualitySystem=
@@ -1703,6 +1819,9 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     order: 7
     accordionOrder: 14
+  # ═══════════════════════════════════════════════════════════════
+  # Network Settings (5 settings)
+  # ═══════════════════════════════════════════════════════════════
   - accordion: Network Settings
     subheader: ""
     property: MaxClientPingMs=
