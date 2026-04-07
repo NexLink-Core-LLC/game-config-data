@@ -19,51 +19,51 @@
 # ─────────────────────────────────────────────
 name: General Server Settings
 settings:
+
   - property: SERVER_NAME
+    configType: server-variable
     label: Server Name
     type: text
     default: Hosted by NexLink Core
     helpText: Sets the name for the server
     fullWidth: false
-    configType: server-variable
-
-  - property: SLOTS
-    label: Player Slots
-    type: number
-    default: ""
-    helpText: Max player slots on the server
-    step: 1
-    fullWidth: false
-    configType: server-variable
-
-  - property: SERVER_PASSWORD
-    label: Server Password
-    type: text
-    default: ""
-    helpText: Sets a password to enter the server.
-    configType: server-variable
-
-  - property: DISCORD
-    label: Server Discord
-    type: text
-    default: gsh
-    helpText: Add your Discord link so players can connect to your Discord server!
-    configType: server-variable
-
-  - subheader: ""
-    property: ServerMap
+    
+  - property: ServerMap
+    section: "[/Script/PathOfTitans.IGameSession]"
     label: Server Map
     default: Island
     helptext: The map the server will load with.
-    section: "[/Script/PathOfTitans.IGameSession]"
     type: select
     options:
       - Island
       - Panjura
       - Riparia
 
-  - subheader: ""
-    property: ServerFootprintLifetime=
+  - property: SLOTS
+    configType: server-variable
+    label: Player Slots
+    type: number
+    default: ""
+    helpText: Max player slots on the server
+    step: 1
+    fullWidth: false
+
+  - property: SERVER_PASSWORD
+    configType: server-variable
+    label: Server Password
+    type: text
+    default: ""
+    helpText: Sets a password to enter the server.
+
+  - property: DISCORD
+    configType: server-variable
+    label: Server Discord
+    type: text
+    default: gsh
+    helpText: Add your Discord link so players can connect to your Discord server!
+
+  - property: ServerFootprintLifetime=
+    section: "[/Script/PathOfTitans.IGameSession]"
     label: Footprint Lifetime
     type: number
     min: 0
@@ -72,10 +72,9 @@ settings:
     default: 60
     helpText: The duration (in seconds) that a server footprint remains active after
       a player leaves.
-    section: "[/Script/PathOfTitans.IGameSession]"
 
-  - subheader: ""
-    property: ReservedSlots=
+  - property: ReservedSlots=
+    section: "[/Script/PathOfTitans.IGameSession]"
     label: Reserved Slots
     type: number
     min: 0
@@ -83,31 +82,28 @@ settings:
     repeatable: false
     default: 20
     helpText: Number of reserved player slots
-    section: "[/Script/PathOfTitans.IGameSession]"
     fullWidth: false
 
-  - subheader: ""
-    property: bServerNameTags=
+  - property: bServerNameTags=
+    section: "[/Script/PathOfTitans.IGameSession]"
     label: Name Tags
     type: checkbox
     repeatable: false
     default: ""
     helpText: Enables or disables the ability for ALL players on the server to see
       player nametags.
-    section: "[/Script/PathOfTitans.IGameSession]"
 
-  - subheader: ""
-    property: bServerFallDamage=
+  - property: bServerFallDamage=
+    section: "[/Script/PathOfTitans.IGameSession]"
     label: Fall Damage
     type: checkbox
     repeatable: false
     default: true
     helpText: Enables or disables fall damage for players.
-    section: "[/Script/PathOfTitans.IGameSession]"
     fullWidth: true
 
-  - subheader: ""
-    property: bServerAllowAnselMultiplayerPausing=
+  - property: bServerAllowAnselMultiplayerPausing=
+    section: "[/Script/PathOfTitans.IGameSession]"
     label: Allow Ansel Multiplayer Pausing
     type: checkbox
     repeatable: false
@@ -116,10 +112,9 @@ settings:
       multiplayer. Be mindful of allowing this, as players can technically use
       it to pause their game to investigate the location of hiding players or
       gain other gameplay advantages.
-    section: "[/Script/PathOfTitans.IGameSession]"
 
-  - subheader: ""
-    property: ServerAnselCameraConstraintDistance=
+  - property: ServerAnselCameraConstraintDistance=
+    section: "[/Script/PathOfTitans.IGameSession]"
     label: Ansel Camera Constraint Distance
     type: number
     min: 0
@@ -129,21 +124,21 @@ settings:
       camera away from their dinosaur in order to take screenshots. It's
       suggested to keep this a bit limited to avoid unfair gameplay advantages.
       Defaults to `500` (5 meters).
-    section: "[/Script/PathOfTitans.IGameSession]"
     dependsOn: bServerAllowAnselMultiplayerPausing=
 
-  - subheader: Time of Day
-    property: bServerDynamicTimeOfDay=
+  - property: bServerDynamicTimeOfDay=
+    subheader: Time of Day
+    section: "[/Script/PathOfTitans.IGameMode]"
     label: Dynamic Time of Day
     type: checkbox
     repeatable: false
     default: true
     helpText: If enabled, the world time cycles automatically between day and night.
-    section: "[/Script/PathOfTitans.IGameMode]"
     fullWidth: true
 
-  - subheader: Time of Day
-    property: ServerDayLength=
+  - property: ServerDayLength=
+    subheader: Time of Day
+    section: "[/Script/PathOfTitans.IGameMode]"
     label: Day Length
     type: number
     min: 1
@@ -151,23 +146,22 @@ settings:
     default: 60
     helpText: Length of the daylight period (units as per game config; higher =
       longer days).
-    section: "[/Script/PathOfTitans.IGameMode]"
     dependsOn: bServerDynamicTimeOfDay
 
-  - subheader: Time of Day
-    property: ServerNightLength=
+  - property: ServerNightLength=
+    subheader: Time of Day
+    section: "[/Script/PathOfTitans.IGameMode]"
     label: Night Length
     type: number
     min: 1
     repeatable: false
     default: 30
-    helpText: Length of the nighttime period (units as per game config; higher =
-      longer nights).
-    section: "[/Script/PathOfTitans.IGameMode]"
+    helpText: Length of the nighttime period (units as per game config; higher = longer nights).
     dependsOn: bServerDynamicTimeOfDay
     
-  - subheader: Time of Day
-    property: ServerStartingTime=
+  - property: ServerStartingTime=
+    section: "[/Script/PathOfTitans.IGameMode]"
+    subheader: Time of Day
     label: Server Starting Time
     type: number
     min: 0
@@ -177,4 +171,3 @@ settings:
     helpText: Specifies the time of day the server begins at after a restart. Time
       is scaled between 0-2300. Example:100 = 1:00 AM, 1200 = 12:00 PM, and 1800
       = 6:00 PM signifies 12:00 PM, and 1800 denotes 6:00 PM.
-    section: "[/Script/PathOfTitans.IGameMode]"
