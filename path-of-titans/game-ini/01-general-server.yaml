@@ -39,13 +39,6 @@ settings:
       - Panjura
       - Riparia
 
-  - property: SERVER_PASSWORD
-    configType: server-variable
-    label: Server Password
-    type: text
-    default: ""
-    helpText: Sets a password to enter the server. Leave blank for no password.
-
   - property: SLOTS
     configType: server-variable
     label: Player Slots
@@ -72,6 +65,13 @@ settings:
     type: text
     default: gsh
     helpText: Add your Discord link so players can connect to your Discord server!
+
+  - property: SERVER_PASSWORD
+    configType: server-variable
+    label: Server Password
+    type: text
+    default: ""
+    helpText: Sets a password to enter the server. Leave blank for no password.
 
   - property: bServerNameTags=
     section: "[/Script/PathOfTitans.IGameSession]"
