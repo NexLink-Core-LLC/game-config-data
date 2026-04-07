@@ -1,15 +1,33 @@
+# ─────────────────────────────────────────────
+# Field Reference
+# ─────────────────────────────────────────────
+# property       INI property name (required)
+# label          Display name in panel UI (required)
+# type           text | number | checkbox | select | password (required)
+# default        Default value (required)
+# helpText       Help description shown to the user
+# section        INI file section e.g. "[/Script/PathOfTitans.IGameSession]"
+# subheader      Sub-group label within the section
+# configType     server-variable (omit for game-ini settings)
+# repeatable     true | false — can appear multiple times
+# fullWidth      true | false — force full-width layout
+# min            Minimum value (number type only)
+# max            Maximum value (number type only)
+# step           Increment step (number type only)
+# options        List of allowed values (select type only)
+# dependsOn      Only show when another setting is enabled
+# ─────────────────────────────────────────────
 name: General Server Settings
 settings:
-  -
-    property: SERVER_NAME
+  - property: SERVER_NAME
     label: Server Name
     type: text
     default: Hosted by NexLink Core
     helpText: Sets the name for the server
     fullWidth: false
     configType: server-variable
-  -
-    property: SLOTS
+
+  - property: SLOTS
     label: Player Slots
     type: number
     default: ""
@@ -17,22 +35,22 @@ settings:
     step: 1
     fullWidth: false
     configType: server-variable
-  -
-    property: SERVER_PASSWORD
+
+  - property: SERVER_PASSWORD
     label: Server Password
     type: text
     default: ""
     helpText: Sets a password to enter the server.
     configType: server-variable
-  -
-    property: DISCORD
+
+  - property: DISCORD
     label: Server Discord
     type: text
     default: gsh
     helpText: Add your Discord link so players can connect to your Discord server!
     configType: server-variable
-  -
-    subheader: ""
+
+  - subheader: ""
     property: ServerMap
     label: Server Map
     default: Island
@@ -43,8 +61,8 @@ settings:
       - Island
       - Panjura
       - Riparia
-  -
-    subheader: ""
+
+  - subheader: ""
     property: ServerFootprintLifetime=
     label: Footprint Lifetime
     type: number
@@ -55,8 +73,8 @@ settings:
     helpText: The duration (in seconds) that a server footprint remains active after
       a player leaves.
     section: "[/Script/PathOfTitans.IGameSession]"
-  -
-    subheader: ""
+
+  - subheader: ""
     property: ReservedSlots=
     label: Reserved Slots
     type: number
@@ -67,8 +85,8 @@ settings:
     helpText: Number of reserved player slots
     section: "[/Script/PathOfTitans.IGameSession]"
     fullWidth: false
-  -
-    subheader: ""
+
+  - subheader: ""
     property: bServerNameTags=
     label: Name Tags
     type: checkbox
@@ -77,8 +95,8 @@ settings:
     helpText: Enables or disables the ability for ALL players on the server to see
       player nametags.
     section: "[/Script/PathOfTitans.IGameSession]"
-  -
-    subheader: ""
+
+  - subheader: ""
     property: bServerFallDamage=
     label: Fall Damage
     type: checkbox
@@ -87,8 +105,8 @@ settings:
     helpText: Enables or disables fall damage for players.
     section: "[/Script/PathOfTitans.IGameSession]"
     fullWidth: true
-  -
-    subheader: ""
+
+  - subheader: ""
     property: bServerAllowAnselMultiplayerPausing=
     label: Allow Ansel Multiplayer Pausing
     type: checkbox
@@ -99,8 +117,8 @@ settings:
       it to pause their game to investigate the location of hiding players or
       gain other gameplay advantages.
     section: "[/Script/PathOfTitans.IGameSession]"
-  -
-    subheader: ""
+
+  - subheader: ""
     property: ServerAnselCameraConstraintDistance=
     label: Ansel Camera Constraint Distance
     type: number
@@ -113,8 +131,8 @@ settings:
       Defaults to `500` (5 meters).
     section: "[/Script/PathOfTitans.IGameSession]"
     dependsOn: bServerAllowAnselMultiplayerPausing=
-  -
-    subheader: Time of Day
+
+  - subheader: Time of Day
     property: bServerDynamicTimeOfDay=
     label: Dynamic Time of Day
     type: checkbox
@@ -123,8 +141,8 @@ settings:
     helpText: If enabled, the world time cycles automatically between day and night.
     section: "[/Script/PathOfTitans.IGameMode]"
     fullWidth: true
-  -
-    subheader: Time of Day
+
+  - subheader: Time of Day
     property: ServerDayLength=
     label: Day Length
     type: number
@@ -135,8 +153,8 @@ settings:
       longer days).
     section: "[/Script/PathOfTitans.IGameMode]"
     dependsOn: bServerDynamicTimeOfDay
-  -
-    subheader: Time of Day
+
+  - subheader: Time of Day
     property: ServerNightLength=
     label: Night Length
     type: number
@@ -147,8 +165,8 @@ settings:
       longer nights).
     section: "[/Script/PathOfTitans.IGameMode]"
     dependsOn: bServerDynamicTimeOfDay
-  -
-    subheader: Time of Day
+    
+  - subheader: Time of Day
     property: ServerStartingTime=
     label: Server Starting Time
     type: number

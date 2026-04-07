@@ -1,3 +1,22 @@
+# ─────────────────────────────────────────────
+# Field Reference
+# ─────────────────────────────────────────────
+# property       INI property name (required)
+# label          Display name in panel UI (required)
+# type           text | number | checkbox | select | password (required)
+# default        Default value (required)
+# helpText       Help description shown to the user
+# section        INI file section e.g. "[/Script/PathOfTitans.IGameSession]"
+# subheader      Sub-group label within the section
+# configType     server-variable (omit for game-ini settings)
+# repeatable     true | false — can appear multiple times
+# fullWidth      true | false — force full-width layout
+# min            Minimum value (number type only)
+# max            Maximum value (number type only)
+# step           Increment step (number type only)
+# options        List of allowed values (select type only)
+# dependsOn      Only show when another setting is enabled
+# ─────────────────────────────────────────────
 name: Nesting # Nesting & Family System Family System
 settings:
   -
