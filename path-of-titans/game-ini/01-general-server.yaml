@@ -27,7 +27,7 @@ settings:
     default: Hosted by NexLink Core
     helpText: Sets the name for the server
     fullWidth: false
-    
+
   - property: ServerMap
     section: "[/Script/PathOfTitans.IGameSession]"
     label: Server Map
@@ -39,6 +39,13 @@ settings:
       - Panjura
       - Riparia
 
+  - property: SERVER_PASSWORD
+    configType: server-variable
+    label: Server Password
+    type: text
+    default: ""
+    helpText: Sets a password to enter the server. Leave blank for no password.
+
   - property: SLOTS
     configType: server-variable
     label: Player Slots
@@ -47,31 +54,6 @@ settings:
     helpText: Max player slots on the server
     step: 1
     fullWidth: false
-
-  - property: SERVER_PASSWORD
-    configType: server-variable
-    label: Server Password
-    type: text
-    default: ""
-    helpText: Sets a password to enter the server.
-
-  - property: DISCORD
-    configType: server-variable
-    label: Server Discord
-    type: text
-    default: gsh
-    helpText: Add your Discord link so players can connect to your Discord server!
-
-  - property: ServerFootprintLifetime=
-    section: "[/Script/PathOfTitans.IGameSession]"
-    label: Footprint Lifetime
-    type: number
-    min: 0
-    max: 60
-    repeatable: false
-    default: 60
-    helpText: The duration (in seconds) that a server footprint remains active after
-      a player leaves.
 
   - property: ReservedSlots=
     section: "[/Script/PathOfTitans.IGameSession]"
@@ -83,6 +65,13 @@ settings:
     default: 20
     helpText: Number of reserved player slots
     fullWidth: false
+
+  - property: DISCORD
+    configType: server-variable
+    label: Server Discord
+    type: text
+    default: gsh
+    helpText: Add your Discord link so players can connect to your Discord server!
 
   - property: bServerNameTags=
     section: "[/Script/PathOfTitans.IGameSession]"
@@ -100,7 +89,6 @@ settings:
     repeatable: false
     default: true
     helpText: Enables or disables fall damage for players.
-    fullWidth: true
 
   - property: bServerAllowAnselMultiplayerPausing=
     section: "[/Script/PathOfTitans.IGameSession]"
@@ -171,3 +159,14 @@ settings:
     helpText: Specifies the time of day the server begins at after a restart. Time
       is scaled between 0-2300. Example:100 = 1:00 AM, 1200 = 12:00 PM, and 1800
       = 6:00 PM signifies 12:00 PM, and 1800 denotes 6:00 PM.
+
+  - property: ServerFootprintLifetime=
+    section: "[/Script/PathOfTitans.IGameSession]"
+    label: Footprint Lifetime
+    type: number
+    min: 0
+    max: 60
+    repeatable: false
+    default: 60
+    helpText: The duration (in seconds) that a server footprint remains active after
+      a player leaves.
