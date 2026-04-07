@@ -1,5 +1,46 @@
 # General Server Settings
 settings:
+  # --- Server Variables (Pterodactyl startup variables) ---
+  - accordion: General Server Settings
+    subheader: ""
+    property: SERVER_NAME
+    label: Server Name
+    type: text
+    default: Hosted by NexLink Core
+    helpText: Sets the name for the server
+    fullWidth: true
+    configType: server-variable
+  - accordion: General Server Settings
+    subheader: ""
+    property: SLOTS
+    label: Player Slots
+    type: number
+    default: ""
+    helpText: Max player slots on the server
+    step: 1
+    fullWidth: false
+    configType: server-variable
+  - accordion: General Server Settings
+    subheader: ""
+    property: SERVER_PASSWORD
+    label: Server Password
+    type: text
+    repeatable: false
+    default: ""
+    helpText: Sets a password to enter the server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    configType: server-variable
+  - accordion: General Server Settings
+    subheader: ""
+    property: DISCORD
+    label: Server Discord
+    type: text
+    repeatable: false
+    default: gsh
+    helpText: Add your Discord link so players can connect to your Discord server!
+    section: "[/Script/PathOfTitans.IGameSession]"
+    configType: server-variable
+  # --- Game.ini Settings ---
   - accordion: General Server Settings
     subheader: ""
     property: ServerMap
