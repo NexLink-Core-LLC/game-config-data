@@ -103,7 +103,7 @@ settings:
     default: 20
     helpText: Number of reserved player slots
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 6
+    order: 7
     accordionOrder: 0
     fullWidth: false
 ###################################################
