@@ -9,8 +9,6 @@ settings:
     default: true
     helpText: Enables or disables Waystones on your server.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 0
-    accordionOrder: 2
   - accordion: Waystone Settings
     subheader: ""
     property: bServerAllowInGameWaystone=
@@ -22,8 +20,6 @@ settings:
       to use the old method of using the Waystone by retuning to the Character
       Menu screen.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 1
-    accordionOrder: 2
   - accordion: Waystone Settings
     subheader: ""
     property: bServerWaystoneCooldownRemoval=
@@ -34,8 +30,6 @@ settings:
     helpText: Enables or disables the ability for players to spend marks to
       insta-cooldown Waystones.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 2
-    accordionOrder: 2
   - accordion: Waystone Settings
     subheader: ""
     property: OverrideWaystoneCooldown=
@@ -47,5 +41,3 @@ settings:
     helpText: Overrides the cooldown timer for Waystones in seconds. -1 will use the
       default cooldown timer.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 3
-    accordionOrder: 2

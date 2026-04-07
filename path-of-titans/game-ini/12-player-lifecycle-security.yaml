@@ -12,8 +12,6 @@ settings:
       `enabled` AND `Enable Editing Abilities in Home Caves`, players can edit
       their abilities in their home caves OR while sleeping.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 0
-    accordionOrder: 11
   - accordion: Player Lifecycle & Security
     subheader: ""
     property: bServerHatchlingCaves=
@@ -28,8 +26,6 @@ settings:
       skip the tutorial. The growth can be modified with `Hatchling Cave Exit
       Growth`.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 1
-    accordionOrder: 11
   - accordion: Player Lifecycle & Security
     subheader: ""
     property: bServerAllowReplayRecording=
@@ -40,8 +36,6 @@ settings:
     helpText: If `enabled`, players will be able to record their gameplay and replay
       it later. If disabled, players will not be able to record their gameplay.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 2
-    accordionOrder: 11
   - accordion: Player Lifecycle & Security
     subheader: ""
     property: ServerDeadBodyTime=
@@ -52,8 +46,6 @@ settings:
     helpText: Sets the time (in seconds) that dead bodies will remain in the world
       before despawning. A value of `0` means it will persist forever.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 3
-    accordionOrder: 11
   - accordion: Player Lifecycle & Security
     subheader: ""
     property: ServerRespawnTime=
@@ -67,8 +59,6 @@ settings:
       to keep this number relatively high to avoid players piling up corpses on
       your server and causing issues.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 4
-    accordionOrder: 11
   - accordion: Player Lifecycle & Security
     subheader: ""
     property: ServerLogoutTime=
@@ -79,8 +69,6 @@ settings:
     helpText: Sets the time (in seconds) that players will remain logged out before
       their session is terminated.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 5
-    accordionOrder: 11
   - accordion: Player Lifecycle & Security
     subheader: ""
     property: AFKDisconnectTime=
@@ -91,8 +79,6 @@ settings:
     helpText: Sets the time (in seconds) that players can be away from their
       keyboard (AFK) before being disconnected from the server.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 6
-    accordionOrder: 11
   - accordion: Player Lifecycle & Security
     subheader: ""
     property: SpeedhackDetection=
@@ -106,8 +92,6 @@ settings:
       `1` = log, `2` = kick, `3` = ban. From settings `1`-`3`, a PlayerHack
       webhook will also be sent.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 7
-    accordionOrder: 11
   - accordion: Player Lifecycle & Security
     subheader: ""
     property: SpeedhackThreshold=
@@ -119,5 +103,3 @@ settings:
     helpText: Sets the threshold for speedhack detection. Higher values may result
       in more false positives.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 8
-    accordionOrder: 11

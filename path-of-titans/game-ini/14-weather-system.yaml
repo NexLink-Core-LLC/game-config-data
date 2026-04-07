@@ -9,8 +9,6 @@ settings:
     default: false
     helpText: If enabled, the server will override the weather settings.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 0
-    accordionOrder: 13
   - accordion: Weather System
     subheader: ""
     property: bRandomizeOverrideWeather=
@@ -20,5 +18,3 @@ settings:
     default: true
     helpText: If enabled, the server will randomize the weather settings.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 1
-    accordionOrder: 13

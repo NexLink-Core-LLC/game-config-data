@@ -9,8 +9,6 @@ settings:
     default: true
     helpText: Enables or disables the full map for the entire server.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 0
-    accordionOrder: 4
   - accordion: Map & Navigation
     subheader: ""
     property: bServerAllowMinimap=
@@ -20,8 +18,6 @@ settings:
     default: true
     helpText: Enables or disables the minimap for the entire server.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 1
-    accordionOrder: 4
   - accordion: Map & Navigation
     subheader: ""
     property: bServerAllow3DMapMarkers=
@@ -32,8 +28,6 @@ settings:
     helpText: Enables or disables the markers on the full map, and floating quest
       markers in the world.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 2
-    accordionOrder: 4
   - accordion: Map & Navigation
     subheader: ""
     property: bServerAllowMapPOINames=
@@ -43,8 +37,6 @@ settings:
     default: true
     helpText: Enables or disables the display of Point of Interest names on the map.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 3
-    accordionOrder: 4
   # --- Popular Locations ---
   - accordion: Map & Navigation
     subheader: Popular Locations
@@ -56,8 +48,6 @@ settings:
     helpText: Enables Popular Locations, highlighting areas of the map with a high
       player density.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 4
-    accordionOrder: 4
   - accordion: Map & Navigation
     subheader: Popular Locations
     property: ServerMapIconPopularLocationPlayerCount=
@@ -68,8 +58,6 @@ settings:
     helpText: Allows you to set the number of users required in an area before it's
       highlighted on the map.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 5
-    accordionOrder: 4
   # --- Spawns ---
   - accordion: Map & Navigation
     subheader: Spawns
@@ -82,5 +70,3 @@ settings:
     helpText: Max radius (game units; e.g., 100000 ≈ 1km) within which spawn points
       are considered for new/respawning players.
     section: "[/Script/PathOfTitans.IGameMode]"
-    order: 6
-    accordionOrder: 4

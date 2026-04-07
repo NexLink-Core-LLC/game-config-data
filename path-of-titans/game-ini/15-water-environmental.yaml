@@ -9,8 +9,6 @@ settings:
     default: true
     helpText: ""
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 0
-    accordionOrder: 14
   - accordion: Water & Environmental Systems
     subheader: ""
     property: bOverrideWaterRegeneration=
@@ -22,8 +20,6 @@ settings:
       false, it will use the default values.
     section: "[/Script/PathOfTitans.IGameSession]"
     dependsOn: bServerWaterQualitySystem
-    order: 1
-    accordionOrder: 14
   - accordion: Water & Environmental Systems
     subheader: ""
     property: bEnableWaterRegeneration=
@@ -36,8 +32,6 @@ settings:
       are hosting, otherwise you will eventually run out of water.
     section: "[/Script/PathOfTitans.IGameSession]"
     dependsOn: bServerWaterQualitySystem
-    order: 2
-    accordionOrder: 14
   - accordion: Water & Environmental Systems
     subheader: ""
     property: WaterRegenerationRateMultiplierUpdate=
@@ -48,8 +42,6 @@ settings:
     default: 180
     helpText: Multiplier for the water regeneration rate.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 3
-    accordionOrder: 14
   - accordion: Water & Environmental Systems
     subheader: ""
     property: WaterRegenerationRate=
@@ -62,8 +54,6 @@ settings:
       Setting this value too low makes the server update water more frequently
       and can cause lag.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 4
-    accordionOrder: 14
   - accordion: Water & Environmental Systems
     subheader: ""
     property: WaterRegenerationValue=
@@ -75,8 +65,6 @@ settings:
     helpText: Amount of water restored per regeneration tick. This scales depending
       on how large the body of water is.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 5
-    accordionOrder: 14
   - accordion: Water & Environmental Systems
     subheader: ""
     property: WaterRainRegenerationIncrement=
@@ -87,8 +75,6 @@ settings:
     default: 20
     helpText: Multiplier that increases the amount of water restored when it rains.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 6
-    accordionOrder: 14
   - accordion: Water & Environmental Systems
     subheader: ""
     property: bServerHungerThirstInCaves=
@@ -100,5 +86,3 @@ settings:
       Dinosaurs will not lose hunger or thirst in Home Caves and will take no
       damage if they have no food or water.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 7
-    accordionOrder: 14

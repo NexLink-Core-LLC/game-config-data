@@ -9,8 +9,6 @@ settings:
     default: true
     helpText: Enables or disables home caves on your server.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 0
-    accordionOrder: 10
   - accordion: Home Cave
     subheader: ""
     property: bServerHomecaveCampingDebuff=
@@ -20,8 +18,6 @@ settings:
     default: true
     helpText: If enabled, players will receive a debuff when camping at a home cave.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 1
-    accordionOrder: 10
   - accordion: Home Cave
     subheader: ""
     property: bOverrideHomecaveCampingDistance=
@@ -31,8 +27,6 @@ settings:
     default: false
     helpText: If enabled, this will override the default camping distance for home caves.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 2
-    accordionOrder: 10
   - accordion: Home Cave
     subheader: ""
     property: HomecaveCampingDistance=
@@ -43,8 +37,6 @@ settings:
     helpText: The distance players must be from the home cave to avoid the camping
       debuff. `20000`, which is 200 meters.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 3
-    accordionOrder: 10
   - accordion: Home Cave
     subheader: ""
     property: bOverrideHomecaveCampingDelay=
@@ -57,8 +49,6 @@ settings:
       them. Typically this should be at least a few minutes to avoid players
       instantly getting debuffed when they walk near a Home Cave.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 4
-    accordionOrder: 10
   - accordion: Home Cave
     subheader: ""
     property: HomecaveCampingDelay=
@@ -69,8 +59,6 @@ settings:
     helpText: Time (in seconds) the Home Cave Camping debuff will delay before being
       applied to a player if they are within the HomecaveCampingDistance.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 5
-    accordionOrder: 10
   - accordion: Home Cave
     subheader: ""
     property: bServerEditAbilitiesInHomeCaves=
@@ -82,8 +70,6 @@ settings:
       disabled, players can edit their abilities anywhere. Recommended to be set
       to `enabled` if you also enable home caves on your server.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 6
-    accordionOrder: 10
   - accordion: Home Cave
     subheader: ""
     property: bServerHealingInHomeCave=
@@ -94,5 +80,3 @@ settings:
     helpText: If `enabled`, players will be able to heal while inside home caves. If
       disabled, players will not be able to heal in home caves.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 7
-    accordionOrder: 10

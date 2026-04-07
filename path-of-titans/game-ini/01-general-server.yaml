@@ -7,8 +7,6 @@ settings:
     default: Island
     helptext: The map the server will load with.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 3
-    accordionOrder: 0
     type: select
     options:
       - Island
@@ -26,8 +24,6 @@ settings:
     helpText: The duration (in seconds) that a server footprint remains active after
       a player leaves.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 5
-    accordionOrder: 0
   - accordion: General Server Settings
     subheader: ""
     property: ReservedSlots=
@@ -39,8 +35,6 @@ settings:
     default: 20
     helpText: Number of reserved player slots
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 6
-    accordionOrder: 0
     fullWidth: false
   - accordion: General Server Settings
     subheader: ""
@@ -52,8 +46,6 @@ settings:
     helpText: Enables or disables the ability for ALL players on the server to see
       player nametags.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 7
-    accordionOrder: 0
   - accordion: General Server Settings
     subheader: ""
     property: bServerFallDamage=
@@ -63,8 +55,6 @@ settings:
     default: true
     helpText: Enables or disables fall damage for players.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 8
-    accordionOrder: 0
     fullWidth: true
   - accordion: General Server Settings
     subheader: ""
@@ -78,8 +68,6 @@ settings:
       it to pause their game to investigate the location of hiding players or
       gain other gameplay advantages.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 9
-    accordionOrder: 0
   - accordion: General Server Settings
     subheader: ""
     property: ServerAnselCameraConstraintDistance=
@@ -93,8 +81,6 @@ settings:
       suggested to keep this a bit limited to avoid unfair gameplay advantages.
       Defaults to `500` (5 meters).
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 10
-    accordionOrder: 0
     dependsOn: bServerAllowAnselMultiplayerPausing=
   # --- Time of Day ---
   - accordion: General Server Settings
@@ -106,8 +92,6 @@ settings:
     default: true
     helpText: If enabled, the world time cycles automatically between day and night.
     section: "[/Script/PathOfTitans.IGameMode]"
-    order: 11
-    accordionOrder: 0
     fullWidth: true
   - accordion: General Server Settings
     subheader: Time of Day
@@ -121,8 +105,6 @@ settings:
       longer days).
     section: "[/Script/PathOfTitans.IGameMode]"
     dependsOn: bServerDynamicTimeOfDay
-    order: 12
-    accordionOrder: 0
   - accordion: General Server Settings
     subheader: Time of Day
     property: ServerNightLength=
@@ -135,8 +117,6 @@ settings:
       longer nights).
     section: "[/Script/PathOfTitans.IGameMode]"
     dependsOn: bServerDynamicTimeOfDay
-    order: 13
-    accordionOrder: 0
   - accordion: General Server Settings
     subheader: Time of Day
     property: ServerStartingTime=
@@ -150,5 +130,3 @@ settings:
       is scaled between 0-2300. Example:100 = 1:00 AM, 1200 = 12:00 PM, and 1800
       = 6:00 PM signifies 12:00 PM, and 1800 denotes 6:00 PM.
     section: "[/Script/PathOfTitans.IGameMode]"
-    order: 14
-    accordionOrder: 0

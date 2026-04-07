@@ -10,8 +10,6 @@ settings:
     helpText: Enables or disables the growth system. If disabled, all dinosaurs will
       spawn as Adults, and all existing characters will be bumped up to Adult.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 0
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: MinGrowthAfterDeath=
@@ -23,8 +21,6 @@ settings:
     default: 0.5
     helpText: Sets the minimum growth stage a dinosaur will revert to after death.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 1
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: GlobalPassiveGrowthPerMinute=
@@ -36,8 +32,6 @@ settings:
       (https://guides.gsh-servers.com/path-of-titans/tools/path-of-titans-growth-calculator)
       to calculate appropriate values.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 2
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: bLoseGrowthPastGrowthStages=
@@ -48,8 +42,6 @@ settings:
     helpText: Allows players to lose growth past Juvenile/Adolescent/Sub-Adult/Adult
       growth states when they die.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 3
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: ChangeSubspeciesGrowthPenaltyPercent=
@@ -61,8 +53,6 @@ settings:
       that `Lose Growth Past Growth Stages` may have to be active for anything
       25 and above.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 4
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: CombatDeathGrowthPenaltyPercent=
@@ -74,8 +64,6 @@ settings:
       `Lose Growth Past Growth Stages` may have to be active for anything 25 and
       above.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 5
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: FallDeathGrowthPenaltyPercent=
@@ -87,8 +75,6 @@ settings:
       Growth Past Growth Stages` may have to be active for anything 25 and
       above.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 6
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: SurvivalDeathGrowthPenaltyPercent=
@@ -100,8 +86,6 @@ settings:
       `Lose Growth Past Growth Stages` may have to be active for anything 25 and
       above.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 7
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: HatchlingCaveExitGrowth=
@@ -114,8 +98,6 @@ settings:
     helpText: Specifies the growth a player will have when they exit the Hatchling
       Caves. `0` denotes a hatchling and is the default value.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 8
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: bUseTutorialCustomGrowthMultiplier=
@@ -127,8 +109,6 @@ settings:
       to determine the growth rate of the player. If `false`, the tutorial will
       use the default growth rate.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 9
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: TutorialCustomGrowthMultiplier=
@@ -138,8 +118,6 @@ settings:
     default: 1
     helpText: Specifies the custom growth multiplier for the tutorial.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 10
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: bServerWellRestedBuff=
@@ -149,8 +127,6 @@ settings:
     default: true
     helpText: Enables or disables the Well Rested buff.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 11
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: ""
     property: bServerFish=
@@ -160,8 +136,6 @@ settings:
     default: false
     helpText: Enables or disables fish spawning.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 12
-    accordionOrder: 6
   # --- Grouping Rules ---
   - accordion: Growth & Survival
     subheader: Grouping Rules
@@ -173,8 +147,6 @@ settings:
     helpText: If enabled, limits or disallows grouping rules for carnivores to curb
       large-pack advantages.
     section: "[/Script/PathOfTitans.IGameMode]"
-    order: 13
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: Grouping Rules
     property: bServerRestrictHerbivoreGrouping=
@@ -185,8 +157,6 @@ settings:
     helpText: If enabled, limits or disallows grouping rules for herbivores to
       reduce herd-size advantages.
     section: "[/Script/PathOfTitans.IGameMode]"
-    order: 14
-    accordionOrder: 6
   - accordion: Growth & Survival
     subheader: Grouping Rules
     property: MaxGroupSize=
@@ -198,8 +168,6 @@ settings:
     default: 10
     helpText: Maximum number of players allowed per group.
     section: "[/Script/PathOfTitans.IGameMode]"
-    order: 15
-    accordionOrder: 6
     step: 1
   - accordion: Growth & Survival
     subheader: Grouping Rules
@@ -212,5 +180,3 @@ settings:
     helpText: Maximum distance (game units) that group leader communications/markers
       are shared. Increase to allow farther coordination.
     section: "[/Script/PathOfTitans.IGameMode]"
-    order: 16
-    accordionOrder: 6

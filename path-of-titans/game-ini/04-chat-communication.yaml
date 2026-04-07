@@ -9,8 +9,6 @@ settings:
     default: true
     helpText: Enables or disables text chat for the entire server.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 0
-    accordionOrder: 3
   - accordion: Chat & Communication
     subheader: ""
     property: bServerGlobalChat=
@@ -20,8 +18,6 @@ settings:
     default: true
     helpText: Enables or disables global chat for all players on the server.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 1
-    accordionOrder: 3
   - accordion: Chat & Communication
     subheader: ""
     property: bServerChatWhispers=
@@ -31,5 +27,3 @@ settings:
     default: true
     helpText: Enables or disables whisper chat for players on the server.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 2
-    accordionOrder: 3
