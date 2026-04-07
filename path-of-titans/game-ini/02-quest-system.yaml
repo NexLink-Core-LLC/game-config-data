@@ -1,7 +1,7 @@
-# Quest System Settings
+name: Quest System Settings
 settings:
   # --- Quests In Location ---
-  - accordion: Quest System Settings
+  -
     subheader: Quests In Location
     property: bOverrideMaxCompleteQuestsInLocation=
     label: Override Max Quests in Location
@@ -12,7 +12,7 @@ settings:
       `MaxCompleteQuestsInLocation`. Defaults to `false`. If set to `true` you
       must also set `MaxCompleteQuestsInLocation`.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Quest System Settings
+  -
     subheader: Quests In Location
     property: MaxCompleteQuestsInLocation=
     label: Max Quests in Location
@@ -22,7 +22,7 @@ settings:
     helpText: Determines how many quests must be completed within a POI before it is
       'completed'.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Quest System Settings
+  -
     subheader: ""
     property: QuestGrowthMultiplier=
     label: Quest Growth Multiplier
@@ -32,7 +32,7 @@ settings:
     helpText: Multiplier for the growth of quest rewards. If you want to disable
       growth from quests, set this value to `0`.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Quest System Settings
+  -
     subheader: ""
     property: QuestMarksMultiplier=
     label: Quest Marks Multiplier
@@ -41,7 +41,7 @@ settings:
     default: 1
     helpText: Specifies the multiplier used when rewarding marks for quest completion.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Quest System Settings
+  -
     subheader: ""
     property: bTrophyQuests=
     label: Enable Trophy Quests
@@ -51,7 +51,7 @@ settings:
     helpText: Enables or disables trophy quests.
     section: "[/Script/PathOfTitans.IGameSession]"
   # --- Trophy Quest ---
-  - accordion: Quest System Settings
+  -
     subheader: Trophy Quest
     property: bOverrideTrophyQuestCooldown=
     label: Override Trophy Quest Cooldown
@@ -61,7 +61,7 @@ settings:
     helpText: Flags whether you want to override the `Trophy Quest Cooldown`. If set
       to true you must also then specify the `Trophy Quest Cooldown`.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Quest System Settings
+  -
     subheader: Trophy Quest
     property: TrophyQuestCooldown=
     label: Trophy Quest Cooldown
@@ -72,7 +72,7 @@ settings:
       quest.
     section: "[/Script/PathOfTitans.IGameSession]"
   # --- Local Quest ---
-  - accordion: Quest System Settings
+  -
     subheader: Local Quest
     property: bOverrideLocalQuestCooldown=
     label: Override Local Quest Cooldown
@@ -82,7 +82,7 @@ settings:
     helpText: Flags whether you want to override the `LocalQuestCooldown`. If set to
       true you must also then specify the `LocalQuestCooldown`.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Quest System Settings
+  -
     subheader: Local Quest
     property: LocalQuestCooldown=
     label: Local Quest Cooldown
@@ -92,7 +92,7 @@ settings:
     helpText: Time (in seconds) between a player being able to recieve a new Local Quest.
     section: "[/Script/PathOfTitans.IGameSession]"
   # --- Location Quest ---
-  - accordion: Quest System Settings
+  -
     subheader: Location Quest
     property: bOverrideLocationQuestCooldown=
     label: Override Location Quest Cooldown
@@ -103,7 +103,7 @@ settings:
       be given to a player. If set to true you must then set `Location Quest
       Cooldown`.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Quest System Settings
+  -
     subheader: Location Quest
     property: LocationQuestCooldown=
     label: Location Quest Cooldown
@@ -113,7 +113,7 @@ settings:
     helpText: Time (in seconds) between a player being able to recieve a new
       Location Quest.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Quest System Settings
+  -
     subheader: ""
     property: MaxGroupQuests=
     label: Max Group Quests
@@ -123,7 +123,7 @@ settings:
     helpText: Specifies the maximum number of group quests that can be assigned to a
       group at a time.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Quest System Settings
+  -
     subheader: ""
     property: bServerLocalWorldQuests=
     label: Local World Quests
@@ -132,7 +132,7 @@ settings:
     default: true
     helpText: Enables or disables Local World Quests on your server.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Quest System Settings
+  -
     subheader: ""
     property: ServerMinTimeBetweenExplorationQuest=
     label: Min Time Between Exploration Quests
@@ -142,7 +142,7 @@ settings:
     helpText: Specifies the minimum time (in minutes) between a player receiving a
       new Exploration quest.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Quest System Settings
+  -
     subheader: ""
     property: bLoseQuestsOnDeath=
     label: Lose Quests On Death

@@ -1,6 +1,6 @@
-# Water & Environmental Systems
+name: Water # Water & Environmental Systems Environmental Systems
 settings:
-  - accordion: Water & Environmental Systems
+  -
     subheader: ""
     property: bServerWaterQualitySystem=
     label: Water Quality System
@@ -9,7 +9,7 @@ settings:
     default: true
     helpText: ""
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Water & Environmental Systems
+  -
     subheader: ""
     property: bOverrideWaterRegeneration=
     label: Override Water Regeneration
@@ -20,7 +20,7 @@ settings:
       false, it will use the default values.
     section: "[/Script/PathOfTitans.IGameSession]"
     dependsOn: bServerWaterQualitySystem
-  - accordion: Water & Environmental Systems
+  -
     subheader: ""
     property: bEnableWaterRegeneration=
     label: Enable Water Regeneration
@@ -32,7 +32,7 @@ settings:
       are hosting, otherwise you will eventually run out of water.
     section: "[/Script/PathOfTitans.IGameSession]"
     dependsOn: bServerWaterQualitySystem
-  - accordion: Water & Environmental Systems
+  -
     subheader: ""
     property: WaterRegenerationRateMultiplierUpdate=
     label: Water Regeneration Rate Multiplier
@@ -42,7 +42,7 @@ settings:
     default: 180
     helpText: Multiplier for the water regeneration rate.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Water & Environmental Systems
+  -
     subheader: ""
     property: WaterRegenerationRate=
     label: Water Regeneration Rate
@@ -54,7 +54,7 @@ settings:
       Setting this value too low makes the server update water more frequently
       and can cause lag.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Water & Environmental Systems
+  -
     subheader: ""
     property: WaterRegenerationValue=
     label: Water Regeneration
@@ -65,7 +65,7 @@ settings:
     helpText: Amount of water restored per regeneration tick. This scales depending
       on how large the body of water is.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Water & Environmental Systems
+  -
     subheader: ""
     property: WaterRainRegenerationIncrement=
     label: Water Rain Regeneration
@@ -75,7 +75,7 @@ settings:
     default: 20
     helpText: Multiplier that increases the amount of water restored when it rains.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Water & Environmental Systems
+  -
     subheader: ""
     property: bServerHungerThirstInCaves=
     label: Hunger & Thirst in Caves

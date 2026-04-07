@@ -1,6 +1,6 @@
-# Death & Respawn
+name: Death # Death & Respawn Respawn
 settings:
-  - accordion: Death & Respawn
+  -
     subheader: ""
     property: bPermaDeath=
     label: Permanent Death
@@ -12,7 +12,7 @@ settings:
       NOTE: This feature is not finished and may break character data for your
       server. Use at your own risk."
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Death & Respawn
+  -
     subheader: ""
     property: bDeathInfo=
     label: Death Info
@@ -22,7 +22,7 @@ settings:
     helpText: Displays a textbox on the Character Select Screen that provides info
       about your dead character when Permanent Death is enabled.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Death & Respawn
+  -
     subheader: ""
     property: bDeathInfoKilledBy=
     label: Death Info Killed By
@@ -31,7 +31,7 @@ settings:
     default: false
     helpText: If enabled, the death info will include the player who killed you.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Death & Respawn
+  -
     subheader: ""
     property: CombatDeathMarksPenaltyPercent=
     label: Combat Death Marks Penalty Percent
@@ -42,7 +42,7 @@ settings:
     helpText: The percentage penalty applied to players who die in combat. This
       affects the number of marks lost upon death.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Death & Respawn
+  -
     subheader: ""
     property: FallDeathMarksPenaltyPercent=
     label: Fall Death Marks Penalty Percent
@@ -53,7 +53,7 @@ settings:
     helpText: The percentage penalty applied to players who die from falling. This
       affects the number of marks lost upon death.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Death & Respawn
+  -
     subheader: ""
     property: SurvivalDeathMarksPenaltyPercent=
     label: Survival Death Marks Penalty Percent
@@ -64,7 +64,7 @@ settings:
     helpText: The percentage penalty applied to players who die from
       survival-related causes. This affects the number of marks lost upon death.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Death & Respawn
+  -
     subheader: ""
     property: RevengeKillDistance=
     label: Revenge Kill Distance
@@ -76,7 +76,7 @@ settings:
       hived servers. It is planned to work for all servers in the future.
       Specifies the radius of the Anti-Revenge Kill distance.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Death & Respawn
+  -
     subheader: ""
     property: bServerAntiRevengeKill=
     label: Server Anti-Revenge Kill

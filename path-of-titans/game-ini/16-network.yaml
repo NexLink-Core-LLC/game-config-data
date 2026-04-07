@@ -1,6 +1,6 @@
-# Network Settings
+name: Network Settings
 settings:
-  - accordion: Network Settings
+  -
     subheader: ""
     property: MaxClientPingMs=
     label: Max Client Ping (ms)
@@ -11,7 +11,7 @@ settings:
       `0` will disable this option. Use to prevent high-ping players causing
       issues for your server.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Network Settings
+  -
     subheader: ""
     property: MaxClientPingDuration=
     label: Max Client Ping Duration (ms)
@@ -22,7 +22,7 @@ settings:
       can exceed the ping limit before being disconnected. `0` will disable this
       option.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Network Settings
+  -
     subheader: ""
     property: bDisableGrouping=
     label: Disable Grouping
@@ -31,7 +31,7 @@ settings:
     default: false
     helpText: If enabled, players will not be grouped together in the server.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Network Settings
+  -
     subheader: ""
     property: bServerCombatTimerAppliesToGroup=
     label: Server Combat Timer Applies to Group
@@ -40,7 +40,7 @@ settings:
     default: true
     helpText: If enabled, the server combat timer will apply to all players in a group.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Network Settings
+  -
     subheader: ""
     property: bServerAllowChangeSubspecies=
     label: Allow Change Subspecies

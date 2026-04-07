@@ -1,6 +1,6 @@
-# Map & Navigation
+name: Map # Map & Navigation Navigation
 settings:
-  - accordion: Map & Navigation
+  -
     subheader: ""
     property: bServerAllowMap=
     label: Allow Map
@@ -9,7 +9,7 @@ settings:
     default: true
     helpText: Enables or disables the full map for the entire server.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Map & Navigation
+  -
     subheader: ""
     property: bServerAllowMinimap=
     label: Allow Minimap
@@ -18,7 +18,7 @@ settings:
     default: true
     helpText: Enables or disables the minimap for the entire server.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Map & Navigation
+  -
     subheader: ""
     property: bServerAllow3DMapMarkers=
     label: Allow 3D Map Markers
@@ -28,7 +28,7 @@ settings:
     helpText: Enables or disables the markers on the full map, and floating quest
       markers in the world.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Map & Navigation
+  -
     subheader: ""
     property: bServerAllowMapPOINames=
     label: Allow Map POI Names
@@ -38,7 +38,7 @@ settings:
     helpText: Enables or disables the display of Point of Interest names on the map.
     section: "[/Script/PathOfTitans.IGameSession]"
   # --- Popular Locations ---
-  - accordion: Map & Navigation
+  -
     subheader: Popular Locations
     property: bServerShowMapIconPopularLocation=
     label: Show Map Icon for Popular Locations
@@ -48,7 +48,7 @@ settings:
     helpText: Enables Popular Locations, highlighting areas of the map with a high
       player density.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Map & Navigation
+  -
     subheader: Popular Locations
     property: ServerMapIconPopularLocationPlayerCount=
     label: Popular Location Player Count
@@ -59,7 +59,7 @@ settings:
       highlighted on the map.
     section: "[/Script/PathOfTitans.IGameSession]"
   # --- Spawns ---
-  - accordion: Map & Navigation
+  -
     subheader: Spawns
     property: FurthestSpawnInclusionRadius=
     label: Furthest Spawn Inclusion Radius

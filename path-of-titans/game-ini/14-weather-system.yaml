@@ -1,6 +1,6 @@
-# Weather System
+name: Weather System
 settings:
-  - accordion: Weather System
+  -
     subheader: ""
     property: bOverrideWeather=
     label: Override Weather
@@ -9,7 +9,7 @@ settings:
     default: false
     helpText: If enabled, the server will override the weather settings.
     section: "[/Script/PathOfTitans.IGameSession]"
-  - accordion: Weather System
+  -
     subheader: ""
     property: bRandomizeOverrideWeather=
     label: Randomize Override Weather
