@@ -31,12 +31,12 @@
 # ═══════════════════════════════════════════════════════════════
 
 serverVariables:
-  - property: SERVER_NAME
+  - accordion: General Server Settings
+    property: SERVER_NAME
     label: Server Name
     type: text
     default: Hosted by GSH
     helptext: Sets the name for the server
-    accordion: General Server Settings
     order: 0
     accordionOrder: 0
     fullWidth: true
@@ -75,3 +75,12 @@ serverVariables:
     order: 4
     accordionOrder: 0
     helptext: Add your Discord link so players can connect to your Discord server!
+  - accordion: General Server Settings
+    property: RCON_PASSWORD
+    label: RCON Password
+    type: text
+    default: "default"
+    helpText: You must generate a unique/complex password using a password generator tool like https://1password.com/password-generator this protects your servers from any hacking attempts!
+    order: 6
+    accordionOrder: 0
+    fullWidth: true
