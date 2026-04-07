@@ -81,6 +81,6 @@ serverVariables:
     type: text
     default: "default"
     helpText: You must generate a unique/complex password using a password generator tool like https://1password.com/password-generator this protects your servers from any hacking attempts!
-    order: 6
+    order: 5
     accordionOrder: 0
     fullWidth: true
