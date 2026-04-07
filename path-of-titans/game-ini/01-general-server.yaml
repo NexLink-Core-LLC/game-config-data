@@ -73,6 +73,14 @@ settings:
     default: ""
     helpText: Sets a password to enter the server. Leave blank for no password.
 
+  - property: RCON Password
+    configType: server-variable
+    label: RCON Password
+    type: password
+    default: ""
+    helpText: Sets a password for RCON access. RCON allows remote administration of the server. Make sure to use a strong password to prevent unauthorized access. Must be at least 8 characters long.
+    fullWidth: true
+
   - property: bServerNameTags=
     section: "[/Script/PathOfTitans.IGameSession]"
     label: Name Tags
