@@ -1,0 +1,61 @@
+# Network Settings
+settings:
+  - accordion: Network Settings
+    subheader: ""
+    property: MaxClientPingMs=
+    label: Max Client Ping (ms)
+    type: number
+    repeatable: false
+    default: 0
+    helpText: Specifies the maximum ms ping before auto-disconnecting the player.
+      `0` will disable this option. Use to prevent high-ping players causing
+      issues for your server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 0
+    accordionOrder: 15
+  - accordion: Network Settings
+    subheader: ""
+    property: MaxClientPingDuration=
+    label: Max Client Ping Duration (ms)
+    type: number
+    repeatable: false
+    default: 0
+    helpText: Specifies the maximum duration (in milliseconds) for which a client
+      can exceed the ping limit before being disconnected. `0` will disable this
+      option.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 1
+    accordionOrder: 15
+  - accordion: Network Settings
+    subheader: ""
+    property: bDisableGrouping=
+    label: Disable Grouping
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: If enabled, players will not be grouped together in the server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 2
+    accordionOrder: 15
+  - accordion: Network Settings
+    subheader: ""
+    property: bServerCombatTimerAppliesToGroup=
+    label: Server Combat Timer Applies to Group
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: If enabled, the server combat timer will apply to all players in a group.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 3
+    accordionOrder: 15
+  - accordion: Network Settings
+    subheader: ""
+    property: bServerAllowChangeSubspecies=
+    label: Allow Change Subspecies
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: If enabled, players will be allowed to change their dinosaur's subspecies.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 4
+    accordionOrder: 15

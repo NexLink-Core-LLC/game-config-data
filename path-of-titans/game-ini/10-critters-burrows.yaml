@@ -1,0 +1,50 @@
+# Critters & Burrows
+settings:
+  - accordion: Critters & Burrows
+    subheader: ""
+    property: bServerCritters=
+    label: Enable Critters
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: If `enabled`, players will be able to see and interact with critters
+      in the game.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 0
+    accordionOrder: 9
+  - accordion: Critters & Burrows
+    subheader: ""
+    property: bCritterBurrows=
+    label: Enable Critter Burrows
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: If `enabled`, players will be able to see and interact with critter
+      burrows in the game.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 1
+    accordionOrder: 9
+  - accordion: Critters & Burrows
+    subheader: ""
+    property: ServerMaxCritters=
+    label: Max Critters
+    type: number
+    repeatable: false
+    default: 100
+    helpText: Sets the maximum number of critters that can exist in the game world
+      at any given time.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 2
+    accordionOrder: 9
+  - accordion: Critters & Burrows
+    subheader: ""
+    property: ServerCritterDensityMultiplier=
+    label: Critter Density Multiplier
+    type: number
+    repeatable: false
+    default: 0.75
+    helpText: A multiplier that affects the density of critters in the game world.
+      Higher values result in more critters spawning.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 3
+    accordionOrder: 9

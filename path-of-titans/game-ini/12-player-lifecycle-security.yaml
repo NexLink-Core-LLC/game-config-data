@@ -1,0 +1,123 @@
+# Player Lifecycle & Security
+settings:
+  - accordion: Player Lifecycle & Security
+    subheader: ""
+    property: bServerEditAbilitiesWhileSleeping=
+    label: Enable Editing Abilities While Sleeping
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: If `enabled`, players can edit their abilities while sleeping. If
+      disabled, players cannot edit their abilities while sleeping. If this is
+      `enabled` AND `Enable Editing Abilities in Home Caves`, players can edit
+      their abilities in their home caves OR while sleeping.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 0
+    accordionOrder: 11
+  - accordion: Player Lifecycle & Security
+    subheader: ""
+    property: bServerHatchlingCaves=
+    label: Enable Hatchling Caves
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables/Disables the tutorial Hatchling Caves. If this is enabled,
+      players will spawn in a tutorial area at `0` growth, and completing quests
+      will bring them to `0.25` growth by the time they exit. If this is
+      disabled, players will spawn in the world at `0.25` growth and completely
+      skip the tutorial. The growth can be modified with `Hatchling Cave Exit
+      Growth`.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 1
+    accordionOrder: 11
+  - accordion: Player Lifecycle & Security
+    subheader: ""
+    property: bServerAllowReplayRecording=
+    label: Enable Replay Recording
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: If `enabled`, players will be able to record their gameplay and replay
+      it later. If disabled, players will not be able to record their gameplay.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 2
+    accordionOrder: 11
+  - accordion: Player Lifecycle & Security
+    subheader: ""
+    property: ServerDeadBodyTime=
+    label: Dead Body Time
+    type: number
+    repeatable: false
+    default: 0
+    helpText: Sets the time (in seconds) that dead bodies will remain in the world
+      before despawning. A value of `0` means it will persist forever.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 3
+    accordionOrder: 11
+  - accordion: Player Lifecycle & Security
+    subheader: ""
+    property: ServerRespawnTime=
+    label: Respawn Time
+    type: number
+    min: 0
+    repeatable: false
+    default: 45
+    helpText: Amount of time (in minutes) a player must be alive before they can use
+      the `/respawn` command to kill their dinosaur and respawn. It's suggested
+      to keep this number relatively high to avoid players piling up corpses on
+      your server and causing issues.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 4
+    accordionOrder: 11
+  - accordion: Player Lifecycle & Security
+    subheader: ""
+    property: ServerLogoutTime=
+    label: Logout Time
+    type: number
+    repeatable: false
+    default: 60
+    helpText: Sets the time (in seconds) that players will remain logged out before
+      their session is terminated.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 5
+    accordionOrder: 11
+  - accordion: Player Lifecycle & Security
+    subheader: ""
+    property: AFKDisconnectTime=
+    label: AFK Disconnect Time
+    type: number
+    repeatable: false
+    default: 600
+    helpText: Sets the time (in seconds) that players can be away from their
+      keyboard (AFK) before being disconnected from the server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 6
+    accordionOrder: 11
+  - accordion: Player Lifecycle & Security
+    subheader: ""
+    property: SpeedhackDetection=
+    label: Speedhack Detection
+    type: number
+    min: 0
+    max: 3
+    repeatable: false
+    default: 1
+    helpText: Setting for action taken when speed hacks are detected. `0` = none,
+      `1` = log, `2` = kick, `3` = ban. From settings `1`-`3`, a PlayerHack
+      webhook will also be sent.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 7
+    accordionOrder: 11
+  - accordion: Player Lifecycle & Security
+    subheader: ""
+    property: SpeedhackThreshold=
+    label: Speedhack Threshold
+    type: number
+    min: 0
+    repeatable: false
+    default: 10
+    helpText: Sets the threshold for speedhack detection. Higher values may result
+      in more false positives.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 8
+    accordionOrder: 11

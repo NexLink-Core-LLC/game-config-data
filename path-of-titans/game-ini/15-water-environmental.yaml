@@ -1,0 +1,104 @@
+# Water & Environmental Systems
+settings:
+  - accordion: Water & Environmental Systems
+    subheader: ""
+    property: bServerWaterQualitySystem=
+    label: Water Quality System
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: ""
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 0
+    accordionOrder: 14
+  - accordion: Water & Environmental Systems
+    subheader: ""
+    property: bOverrideWaterRegeneration=
+    label: Override Water Regeneration
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: Enables or disables the default water regeneration behavior. If set to
+      false, it will use the default values.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    dependsOn: bServerWaterQualitySystem
+    order: 1
+    accordionOrder: 14
+  - accordion: Water & Environmental Systems
+    subheader: ""
+    property: bEnableWaterRegeneration=
+    label: Enable Water Regeneration
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: Enables or disables water regeneration for players. If this is
+      disabled, please ensure you have water restoration quests on the map you
+      are hosting, otherwise you will eventually run out of water.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    dependsOn: bServerWaterQualitySystem
+    order: 2
+    accordionOrder: 14
+  - accordion: Water & Environmental Systems
+    subheader: ""
+    property: WaterRegenerationRateMultiplierUpdate=
+    label: Water Regeneration Rate Multiplier
+    type: number
+    min: 0
+    repeatable: false
+    default: 180
+    helpText: Multiplier for the water regeneration rate.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 3
+    accordionOrder: 14
+  - accordion: Water & Environmental Systems
+    subheader: ""
+    property: WaterRegenerationRate=
+    label: Water Regeneration Rate
+    type: number
+    min: 0
+    repeatable: false
+    default: 60
+    helpText: Amount of time in seconds before water applies a regeneration amount.
+      Setting this value too low makes the server update water more frequently
+      and can cause lag.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 4
+    accordionOrder: 14
+  - accordion: Water & Environmental Systems
+    subheader: ""
+    property: WaterRegenerationValue=
+    label: Water Regeneration
+    type: number
+    min: 0
+    repeatable: false
+    default: 10
+    helpText: Amount of water restored per regeneration tick. This scales depending
+      on how large the body of water is.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 5
+    accordionOrder: 14
+  - accordion: Water & Environmental Systems
+    subheader: ""
+    property: WaterRainRegenerationIncrement=
+    label: Water Rain Regeneration
+    type: number
+    min: 0
+    repeatable: false
+    default: 20
+    helpText: Multiplier that increases the amount of water restored when it rains.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 6
+    accordionOrder: 14
+  - accordion: Water & Environmental Systems
+    subheader: ""
+    property: bServerHungerThirstInCaves=
+    label: Hunger & Thirst in Caves
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: Enables or disables Hunger and Thirst in Home Caves. If disabled,
+      Dinosaurs will not lose hunger or thirst in Home Caves and will take no
+      damage if they have no food or water.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 7
+    accordionOrder: 14

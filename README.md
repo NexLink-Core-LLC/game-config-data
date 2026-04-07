@@ -11,22 +11,39 @@ Community-managed game server configuration data for the [NexLink Core Panel](ht
 ```
 game-config-data/
   path-of-titans/
-    game-ini-schema.yaml          # Game.ini configuration schema
-    server-variables-schema.yaml  # Server startup variable schema
-    map-mods.yaml                 # List of mods that are map replacements
-    mod-creatures.json            # Mod creature name-to-author mapping
-    startup-errors.json           # Console error detection patterns
+    game-ini/                         # Game.ini settings (split by section)
+      01-general-server.yaml
+      02-quest-system.yaml
+      03-waystone.yaml
+      04-chat-communication.yaml
+      05-map-navigation.yaml
+      06-whitelist-permissions.yaml
+      07-growth-survival.yaml
+      08-nesting-family.yaml
+      09-death-respawn.yaml
+      10-critters-burrows.yaml
+      11-home-cave.yaml
+      12-player-lifecycle-security.yaml
+      13-character-management.yaml
+      14-weather-system.yaml
+      15-water-environmental.yaml
+      16-network.yaml
+    server-variables-schema.yaml      # Server startup variable schema
+    map-mods.txt                      # List of mods that are map replacements
+    mod-creatures.csv                 # Mod creature name-to-author mapping
+    startup-errors.json               # Console error detection patterns
 ```
 
 ---
 
 ## File Formats
 
-### `game-ini-schema.yaml`
+### `game-ini/*.yaml` — Game.ini Configuration Schema
 
-Defines available settings for the Game.ini configuration editor in the panel. Each setting maps to an INI property on the game server.
+Each YAML file defines the settings for one section of the Game.ini configuration editor. Files are numbered to control display order — rename the prefix to reorder sections.
 
 ```yaml
+# Example: 01-general-server.yaml
 settings:
   - property: ServerMap          # INI property name
     label: Server Map            # Display name in the UI
@@ -44,7 +61,13 @@ settings:
 
 **Supported types:** `select`, `number`, `text`, `checkbox`
 
-**Optional fields:** `min`, `max`, `step` (for numbers), `options` (for selects), `repeatable`, `fullWidth`
+**Optional fields:** `min`, `max`, `step` (for numbers), `options` (for selects), `repeatable`, `fullWidth`, `dependsOn`
+
+**To add a new setting:** Edit the appropriate section file and add a new entry to the `settings` array.
+
+**To reorder sections:** Rename the number prefix (e.g., rename `05-` to `03-` to move it earlier).
+
+**To add a new section:** Create a new numbered YAML file (e.g., `17-new-section.yaml`) with the same format.
 
 ---
 
@@ -64,49 +87,35 @@ serverVariables:
     order: 0
 ```
 
-Same field types as `game-ini-schema.yaml` but uses `serverVariables:` as the root key.
+Same field types as game-ini files but uses `serverVariables:` as the root key.
 
 ---
 
-### `map-mods.yaml`
+### `map-mods.txt`
 
-Simple list of mod SKUs that are **map replacement mods**. These mods appear in the ServerMap dropdown instead of the regular Mods tab.
+Simple list of mod SKUs that are **map replacement mods** (one per line). These mods appear in the ServerMap dropdown instead of the regular Mods tab.
 
-```yaml
+```
 # Mods listed here appear in the ServerMap dropdown
-# instead of the regular Mods tab
-mapMods:
-  - UGC_M_Y250G15EVZ_SK
-  - UGC_M_DYV7XD5EGX_SK
+UGC_M_Y250G15EVZ_SK
+UGC_M_DYV7XD5EGX_SK
 ```
 
-**To add a new map mod:** Add the mod's SKU (found in-game or in `GameUserSettings.ini`) to the list.
+**To add a new map mod:** Add the mod's SKU on a new line.
 
 ---
 
-### `mod-creatures.json`
+### `mod-creatures.csv`
 
 Maps mod creature names to their author/mod pack and SKU. Used by the Growth Calculator to filter creatures by enabled mods.
 
-```json
-{
-  "AbsentiaAcro": {
-    "author": "Absentia",
-    "sku": "UGC_M_NV57RV2EJD_SK"
-  },
-  "Camarasaurus": {
-    "author": "Ancient Gods",
-    "sku": "UGC_M_DYV7XQ60GX_SK"
-  }
-}
+```csv
+creature,author,sku
+AbsentiaAcro,Absentia,UGC_M_NV57RV2EJD_SK
+Camarasaurus,Ancient Gods,UGC_M_DYV7XQ60GX_SK
 ```
 
-**Fields:**
-- Key = creature name (exact match, case-sensitive)
-- `author` = mod creator/brand name
-- `sku` = mod SKU identifier (links creature to its mod)
-
-**To add a new creature:** Add an entry with the creature name as the key. The `sku` field links it to the correct mod in the Growth Calculator.
+**To add a new creature:** Add a new row with `CreatureName,AuthorName,SKU`.
 
 ---
 

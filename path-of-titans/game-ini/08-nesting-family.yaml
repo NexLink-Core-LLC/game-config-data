@@ -1,0 +1,458 @@
+# Nesting & Family System
+settings:
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: bServerNesting=
+    label: Enable Nesting
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables or disables the nesting system.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 0
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: bNestingDecorations=
+    label: Enable Nesting Decorations
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables or disables the nesting decorations.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 1
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: bServerHatchlingCaveEggs=
+    label: Enable Hatchling Cave Eggs
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: If `true`, eggs will be placed in the Hatchling Caves.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 2
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: bServerSameSpeciesAdoptionRestriction=
+    label: Enable Same Species Adoption Restriction
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: If `true`, only the same species can be adopted. Otherwise, only the
+      same diet type can be adopted.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 3
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MinNestingGrowth=
+    label: Minimum Nesting Growth
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.75
+    helpText: The minimum growth a player must be in order to place a nest.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 4
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MaxNestImmunityBuffGrowth=
+    label: Maximum Nest Immunity Buff Growth
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.25
+    helpText: The maximum growth a hatchling will become immune to all damage for a
+      short time after spawning at their parent's nest. Set this to 0 to
+      completely disable the hatchling spawn immunity.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 5
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MaxNestRespawnGrowth=
+    label: Maximum Nest Respawn Growth
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.5
+    helpText: The maximum growth a hatchling will respawn at their parent's nest.
+      Once they grow past this value, they will respawn at a random point on the
+      map like a regular adult dinosaur.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 6
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MaxNestFreeRespawnGrowth=
+    label: Maximum Nest Free Respawn Growth
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.25
+    helpText: The maximum growth a hatchling will have to receive the nest free
+      respawn buff. Once they grow past this value, they will no longer receive
+      the nest free respawn buff.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 7
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MinNestRespawnCondition=
+    label: Minimum Nest Respawn Condition
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.5
+    helpText: The minimum health a nest must have for a hatchling to be able to
+      respawn at it. If the nest is too damaged, the hatchling will not be able
+      to respawn there and will instead spawn at a random point on the map like
+      a regular adult dinosaur.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 8
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MinNestHealthForDecorations=
+    label: Minimum Nest Health for Decorations
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.5
+    helpText: The minimum health a nest must have for decorations to be placed on
+      it. If the nest is too damaged, decorations cannot be placed on it.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 9
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MinNestBabySlotFoodWater=
+    label: Minimum Nest Baby Slot Food & Water
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.5
+    helpText: The minimum food and water a nest must have for a hatchling to be able
+      to respawn at it. If the nest does not have enough food or water, the
+      hatchling will not be able to respawn there and will instead spawn at a
+      random point on the map like a regular adult dinosaur.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 10
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MinNestBabySlotResources=
+    label: Minimum Nest Baby Slot Resources
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.5
+    helpText: The minimum resources a nest must have for a hatchling to be able to
+      respawn at it. If the nest does not have enough resources, the hatchling
+      will not be able to respawn there and will instead spawn at a random point
+      on the map like a regular adult dinosaur.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 11
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MinNestHealthToEditAbilities=
+    label: Minimum Nest Health to Edit Abilities
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.75
+    helpText: The minimum health a nest must have for a hatchling to be able to edit
+      its abilities. If the nest is too damaged, the hatchling will not be able
+      to edit its abilities.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 12
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MaxAdoptionGrowth=
+    label: Maximum Adoption Growth
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.5
+    helpText: The maximum growth a hatchling can achieve before being eligible for
+      adoption by another player. Once they grow past this value, they will no
+      longer be able to be adopted.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 13
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MaxEatFromNestGrowth=
+    label: Maximum Eat From Nest Growth
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.5
+    helpText: The maximum growth a hatchling can achieve while eating from the nest.
+      Once they grow past this value, they will no longer be able to eat from
+      the nest.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 14
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MaxDependentChildGrowth=
+    label: Maximum Dependent Child Growth
+    type: number
+    min: 0
+    max: 1
+    repeatable: false
+    default: 0.5
+    helpText: The max growth a child can be to be consider a dependent of its
+      parent. Used to determine a few things such as if a nest should use solo
+      or dependent inactivity timers.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 15
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: NestInactiveDespawnTimeSolo=
+    label: Nest Inactive Despawn Time (Solo)
+    type: number
+    min: 0
+    repeatable: false
+    default: 120
+    helpText: The time (in seconds) a nest will remain inactive before despawning
+      when there are no players nearby. This is only applicable in solo play.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 16
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: NestInactiveDespawnTimeDependents=
+    label: Nest Inactive Despawn Time (With Dependents)
+    type: number
+    min: 0
+    repeatable: false
+    default: 120
+    helpText: The time (in seconds) a nest will remain inactive before despawning
+      when there are no players nearby. This is only applicable when there are
+      dependent hatchlings present.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 17
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: NestDisrepairDespawnTime=
+    label: Nest Disrepair Despawn Time
+    type: number
+    min: 0
+    repeatable: false
+    default: 7200
+    helpText: The amount of seconds a nest with 0 health will be destroyed permanently.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 18
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: NestLowHealthThreshold=
+    label: Nest Low Health Threshold
+    type: number
+    min: 0
+    repeatable: false
+    default: 0.2
+    helpText: The nest health percentage when it will display a warning to the owner.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 19
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: NestBabySlotGenerationTime=
+    label: Nest Baby Slot Generation Time
+    type: number
+    min: 0
+    repeatable: false
+    default: 300
+    helpText: The time (in seconds) it takes for a new baby slot to be generated in
+      the nest.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 20
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: NestInvitationExpiryTime=
+    label: Nest Invitation Expiry Time
+    type: number
+    min: 0
+    repeatable: false
+    default: 300
+    helpText: The amount of seconds until an accepted nest invitation will no longer
+      be valid to use. This will be used on the character creation screen as the
+      player is creating their new hatchling character.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 21
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: FamilyBuffRange=
+    label: Family Buff Range
+    type: number
+    min: 0
+    repeatable: false
+    default: 5000
+    helpText: The distance from family members that the family buff will be applied.
+      Set this to `0` to disable this buff.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 22
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: NestResourceMultiplier=
+    label: Nest Resource Multiplier
+    type: number
+    min: 0
+    repeatable: false
+    default: 1
+    helpText: The multiplier on the amount of resources required to construct a
+      nest. If set to `0`, nests will not require resources and can be built
+      instantly without them.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 23
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: NestResourcelessConstructionSpeed=
+    label: Nest Resourceless Construction Speed
+    type: number
+    min: 0
+    repeatable: false
+    default: 5
+    helpText: The amount of health contributed to a nest when `Nest Resource
+      Multiplier` is zero.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 24
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: bNestsInvulnerable=
+    label: Nests Invulnerable
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: If enabled, nests will be invulnerable to damage.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 25
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: NestObstructionRadius=
+    label: Nest Obstruction Radius
+    type: number
+    min: 0
+    repeatable: false
+    default: 5
+    helpText: The radius in centimeters other nests cannot be placed near an
+      existing nest. In meters.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 26
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: bSpawnParentNestOnLogin=
+    label: Spawn Parent Nest On Login
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: If enabled, the parent's nest will spawn when a child that is still
+      young logs in. This can be useful to avoid players being orphaned if their
+      parents log out.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 27
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: NestTutorialGrowthRateMultiplier=
+    label: Nest Tutorial Growth Rate Multiplier
+    type: number
+    min: 0
+    repeatable: false
+    default: 10
+    helpText: The multiplier applied to the growth rate of nestlings during the tutorial.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 28
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MaxNestHeight=
+    label: Max Nest Height
+    type: number
+    min: 0
+    repeatable: false
+    default: 50000
+    helpText: The maximum height (in centimeters) that a nest can be built.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 29
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: NestSaveIntervalSeconds=
+    label: Nest Save Interval Seconds
+    type: number
+    min: 0
+    repeatable: false
+    default: 900
+    helpText: The interval (in seconds) at which the nest's state will be saved.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 30
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MinimumNestDistanceFromHomeRock=
+    label: Minimum Nest Distance From Home Rock
+    type: number
+    min: 0
+    repeatable: false
+    default: 5000
+    helpText: The minimum distance (in centimeters) that a nest must be placed from
+      the home rock.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 31
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: bServerEditAbilitiesAtNest=
+    label: Server Edit Abilities At Nest
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: If true, players can only edit abilities at their nest or home cave
+      (if enabled). Disabling both `Enable Editing Abilities in Home Caves` AND
+      `Server Edit Abilities At Nest` will allow players to edit their abilities
+      anywhere.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 32
+    accordionOrder: 7
+  - accordion: Nesting & Family System
+    subheader: ""
+    property: MinNestBuffHealthPercent=
+    label: Minimum Nest Buff Health Percent
+    type: number
+    min: 0
+    repeatable: false
+    default: 0.5
+    helpText: The minimum health percentage a nest must have to apply the nest buff
+      to the player.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 33
+    accordionOrder: 7

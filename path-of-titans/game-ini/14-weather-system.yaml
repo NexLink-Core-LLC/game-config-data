@@ -1,0 +1,24 @@
+# Weather System
+settings:
+  - accordion: Weather System
+    subheader: ""
+    property: bOverrideWeather=
+    label: Override Weather
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: If enabled, the server will override the weather settings.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 0
+    accordionOrder: 13
+  - accordion: Weather System
+    subheader: ""
+    property: bRandomizeOverrideWeather=
+    label: Randomize Override Weather
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: If enabled, the server will randomize the weather settings.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 1
+    accordionOrder: 13

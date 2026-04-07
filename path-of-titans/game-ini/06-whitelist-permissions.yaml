@@ -1,0 +1,25 @@
+# Whitelist & Permissions
+settings:
+  - accordion: Whitelist & Permissions
+    subheader: ""
+    property: bEnforceWhitelist=
+    label: Enforce Whitelist
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: Enables or disables the enforcement of the whitelist. If enabled, only
+      players on the whitelist can join the server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 0
+    accordionOrder: 5
+  - accordion: Whitelist & Permissions
+    subheader: ""
+    property: bServerPaidUsersOnly=
+    label: Paid Users Only
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: Enables or disables access to the server for paid users only.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 1
+    accordionOrder: 5

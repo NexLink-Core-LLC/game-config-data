@@ -1,0 +1,86 @@
+# Map & Navigation
+settings:
+  - accordion: Map & Navigation
+    subheader: ""
+    property: bServerAllowMap=
+    label: Allow Map
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables or disables the full map for the entire server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 0
+    accordionOrder: 4
+  - accordion: Map & Navigation
+    subheader: ""
+    property: bServerAllowMinimap=
+    label: Allow Minimap
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables or disables the minimap for the entire server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 1
+    accordionOrder: 4
+  - accordion: Map & Navigation
+    subheader: ""
+    property: bServerAllow3DMapMarkers=
+    label: Allow 3D Map Markers
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables or disables the markers on the full map, and floating quest
+      markers in the world.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 2
+    accordionOrder: 4
+  - accordion: Map & Navigation
+    subheader: ""
+    property: bServerAllowMapPOINames=
+    label: Allow Map POI Names
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables or disables the display of Point of Interest names on the map.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 3
+    accordionOrder: 4
+  # --- Popular Locations ---
+  - accordion: Map & Navigation
+    subheader: Popular Locations
+    property: bServerShowMapIconPopularLocation=
+    label: Show Map Icon for Popular Locations
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables Popular Locations, highlighting areas of the map with a high
+      player density.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 4
+    accordionOrder: 4
+  - accordion: Map & Navigation
+    subheader: Popular Locations
+    property: ServerMapIconPopularLocationPlayerCount=
+    label: Popular Location Player Count
+    type: number
+    repeatable: false
+    default: 10
+    helpText: Allows you to set the number of users required in an area before it's
+      highlighted on the map.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 5
+    accordionOrder: 4
+  # --- Spawns ---
+  - accordion: Map & Navigation
+    subheader: Spawns
+    property: FurthestSpawnInclusionRadius=
+    label: Furthest Spawn Inclusion Radius
+    type: number
+    min: 0
+    repeatable: false
+    default: 100000
+    helpText: Max radius (game units; e.g., 100000 ≈ 1km) within which spawn points
+      are considered for new/respawning players.
+    section: "[/Script/PathOfTitans.IGameMode]"
+    order: 6
+    accordionOrder: 4

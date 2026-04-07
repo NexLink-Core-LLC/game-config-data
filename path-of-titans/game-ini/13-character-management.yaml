@@ -1,0 +1,28 @@
+# Character Management
+settings:
+  - accordion: Character Management
+    subheader: ""
+    property: MaxCharactersPerPlayer=
+    label: Max Characters Per Player
+    type: number
+    min: 1
+    max: 50
+    repeatable: false
+    default: 30
+    helpText: Sets the maximum number of characters a player can create.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 0
+    accordionOrder: 12
+  - accordion: Character Management
+    subheader: ""
+    property: MaxCharactersPerSpecies=
+    label: Max Characters Per Species
+    type: number
+    min: 1
+    max: 50
+    repeatable: false
+    default: 1
+    helpText: Sets the maximum number of characters a player can create per species.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 1
+    accordionOrder: 12

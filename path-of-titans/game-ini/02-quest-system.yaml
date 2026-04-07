@@ -1,0 +1,183 @@
+# Quest System Settings
+settings:
+  # --- Quests In Location ---
+  - accordion: Quest System Settings
+    subheader: Quests In Location
+    property: bOverrideMaxCompleteQuestsInLocation=
+    label: Override Max Quests in Location
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: Enables or disables the ability to change the
+      `MaxCompleteQuestsInLocation`. Defaults to `false`. If set to `true` you
+      must also set `MaxCompleteQuestsInLocation`.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 0
+    accordionOrder: 1
+  - accordion: Quest System Settings
+    subheader: Quests In Location
+    property: MaxCompleteQuestsInLocation=
+    label: Max Quests in Location
+    type: number
+    repeatable: false
+    default: 3
+    helpText: Determines how many quests must be completed within a POI before it is
+      'completed'.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 1
+    accordionOrder: 1
+  - accordion: Quest System Settings
+    subheader: ""
+    property: QuestGrowthMultiplier=
+    label: Quest Growth Multiplier
+    type: number
+    repeatable: false
+    default: 1
+    helpText: Multiplier for the growth of quest rewards. If you want to disable
+      growth from quests, set this value to `0`.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 2
+    accordionOrder: 1
+  - accordion: Quest System Settings
+    subheader: ""
+    property: QuestMarksMultiplier=
+    label: Quest Marks Multiplier
+    type: number
+    repeatable: false
+    default: 1
+    helpText: Specifies the multiplier used when rewarding marks for quest completion.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 3
+    accordionOrder: 1
+  - accordion: Quest System Settings
+    subheader: ""
+    property: bTrophyQuests=
+    label: Enable Trophy Quests
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables or disables trophy quests.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 4
+    accordionOrder: 1
+  # --- Trophy Quest ---
+  - accordion: Quest System Settings
+    subheader: Trophy Quest
+    property: bOverrideTrophyQuestCooldown=
+    label: Override Trophy Quest Cooldown
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: Flags whether you want to override the `Trophy Quest Cooldown`. If set
+      to true you must also then specify the `Trophy Quest Cooldown`.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 5
+    accordionOrder: 1
+  - accordion: Quest System Settings
+    subheader: Trophy Quest
+    property: TrophyQuestCooldown=
+    label: Trophy Quest Cooldown
+    type: number
+    repeatable: false
+    default: 1800
+    helpText: Time (in seconds) between a player being able to handin another Trophy
+      quest.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 6
+    accordionOrder: 1
+  # --- Local Quest ---
+  - accordion: Quest System Settings
+    subheader: Local Quest
+    property: bOverrideLocalQuestCooldown=
+    label: Override Local Quest Cooldown
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: Flags whether you want to override the `LocalQuestCooldown`. If set to
+      true you must also then specify the `LocalQuestCooldown`.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 7
+    accordionOrder: 1
+  - accordion: Quest System Settings
+    subheader: Local Quest
+    property: LocalQuestCooldown=
+    label: Local Quest Cooldown
+    type: number
+    repeatable: false
+    default: 3600
+    helpText: Time (in seconds) between a player being able to recieve a new Local Quest.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 8
+    accordionOrder: 1
+  # --- Location Quest ---
+  - accordion: Quest System Settings
+    subheader: Location Quest
+    property: bOverrideLocationQuestCooldown=
+    label: Override Location Quest Cooldown
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: Specifies whether to change the time it takes for a Location Quest to
+      be given to a player. If set to true you must then set `Location Quest
+      Cooldown`.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 9
+    accordionOrder: 1
+  - accordion: Quest System Settings
+    subheader: Location Quest
+    property: LocationQuestCooldown=
+    label: Location Quest Cooldown
+    type: number
+    repeatable: false
+    default: 3600
+    helpText: Time (in seconds) between a player being able to recieve a new
+      Location Quest.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 10
+    accordionOrder: 1
+  - accordion: Quest System Settings
+    subheader: ""
+    property: MaxGroupQuests=
+    label: Max Group Quests
+    type: number
+    repeatable: false
+    default: 2
+    helpText: Specifies the maximum number of group quests that can be assigned to a
+      group at a time.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 11
+    accordionOrder: 1
+  - accordion: Quest System Settings
+    subheader: ""
+    property: bServerLocalWorldQuests=
+    label: Local World Quests
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables or disables Local World Quests on your server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 12
+    accordionOrder: 1
+  - accordion: Quest System Settings
+    subheader: ""
+    property: ServerMinTimeBetweenExplorationQuest=
+    label: Min Time Between Exploration Quests
+    type: number
+    repeatable: false
+    default: 30
+    helpText: Specifies the minimum time (in minutes) between a player receiving a
+      new Exploration quest.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 13
+    accordionOrder: 1
+  - accordion: Quest System Settings
+    subheader: ""
+    property: bLoseQuestsOnDeath=
+    label: Lose Quests On Death
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Specifies whether quests will automatically fail when a player dies.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 14
+    accordionOrder: 1

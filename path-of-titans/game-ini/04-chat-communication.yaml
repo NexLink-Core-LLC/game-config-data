@@ -1,0 +1,35 @@
+# Chat & Communication
+settings:
+  - accordion: Chat & Communication
+    subheader: ""
+    property: bServerAllowChat=
+    label: Allow Chat
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables or disables text chat for the entire server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 0
+    accordionOrder: 3
+  - accordion: Chat & Communication
+    subheader: ""
+    property: bServerGlobalChat=
+    label: Global Chat
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables or disables global chat for all players on the server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 1
+    accordionOrder: 3
+  - accordion: Chat & Communication
+    subheader: ""
+    property: bServerChatWhispers=
+    label: Chat Whispers
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: Enables or disables whisper chat for players on the server.
+    section: "[/Script/PathOfTitans.IGameSession]"
+    order: 2
+    accordionOrder: 3
