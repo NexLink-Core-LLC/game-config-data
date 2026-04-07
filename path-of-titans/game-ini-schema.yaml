@@ -89,7 +89,7 @@ settings:
     helpText: The duration (in seconds) that a server footprint remains active after
       a player leaves.
     section: "[/Script/PathOfTitans.IGameSession]"
-    order: 5
+    order: 6
     accordionOrder: 0
 ###################################################
   - accordion: General Server Settings
