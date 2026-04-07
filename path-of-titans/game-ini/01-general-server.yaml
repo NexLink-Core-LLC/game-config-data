@@ -1,13 +1,12 @@
 name: General Server Settings
 settings:
-  # --- Server Variables (Pterodactyl startup variables) ---
   -
     property: SERVER_NAME
     label: Server Name
     type: text
     default: Hosted by NexLink Core
     helpText: Sets the name for the server
-    fullWidth: true
+    fullWidth: false
     configType: server-variable
   -
     property: SLOTS
@@ -32,7 +31,6 @@ settings:
     default: gsh
     helpText: Add your Discord link so players can connect to your Discord server!
     configType: server-variable
-  # --- Game.ini Settings ---
   -
     subheader: ""
     property: ServerMap
@@ -115,7 +113,6 @@ settings:
       Defaults to `500` (5 meters).
     section: "[/Script/PathOfTitans.IGameSession]"
     dependsOn: bServerAllowAnselMultiplayerPausing=
-  # --- Time of Day ---
   -
     subheader: Time of Day
     property: bServerDynamicTimeOfDay=
