@@ -32,7 +32,7 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
     label: Server Map
     default: Island
-    helptext: The map the server will load with.
+    helpText: The map the server will load with.
     type: select
     options:
       - Island
