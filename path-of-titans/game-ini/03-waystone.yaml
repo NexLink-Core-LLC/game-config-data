@@ -1,21 +1,53 @@
 # ─────────────────────────────────────────────
 # Field Reference
 # ─────────────────────────────────────────────
-# property       INI property name (required)
-# label          Display name in panel UI (required)
-# type           text | number | checkbox | select | password (required)
-# default        Default value (required)
-# helpText       Help description shown to the user
-# section        INI file section e.g. "[/Script/PathOfTitans.IGameSession]"
-# subheader      Sub-group label within the section
-# configType     server-variable (omit for game-ini settings)
-# repeatable     true | false — can appear multiple times
-# fullWidth      true | false — force full-width layout
-# min            Minimum value (number type only)
-# max            Maximum value (number type only)
-# step           Increment step (number type only)
-# options        List of allowed values (select type only)
-# dependsOn      Only show when another setting is enabled
+#
+# REQUIRED FIELDS:
+#   property       INI property name (e.g. bServerGrowth=)
+#   label          Display name shown in the panel UI
+#   type           Input type (see Input Types below)
+#   default        Default value when the setting is not set
+#
+# OPTIONAL FIELDS:
+#   helpText       Help description shown to the user
+#   section        INI file section e.g. "[/Script/PathOfTitans.IGameSession]"
+#   subheader      Sub-group label within the section
+#   configType     Set to "server-variable" for Pterodactyl startup variables
+#                  (omit for Game.ini settings)
+#   repeatable     true | false — can this setting appear multiple times
+#   fullWidth      true | false — force the field to take the full row
+#   min            Minimum allowed value (number type only)
+#   max            Maximum allowed value (number type only)
+#   step           Increment step size (number type only, e.g. 1 for whole numbers)
+#   options        List of allowed values (select type only)
+#   dependsOn      Only show this setting when another setting is enabled
+#                  (use the property name, e.g. dependsOn: bServerDynamicTimeOfDay)
+#
+# ─────────────────────────────────────────────
+# Input Types
+# ─────────────────────────────────────────────
+#
+#   text       A free-text input field. The user can type anything.
+#              Example: Server name, Discord invite code
+#
+#   number     A numeric input with optional min/max/step constraints.
+#              Use "min" and "max" to set allowed range.
+#              Use "step" to control increment (e.g. step: 1 for integers,
+#              step: 0.01 for decimals).
+#              Example: Player slots, cooldown timers, growth multipliers
+#
+#   checkbox   A toggle switch (true/false). Shows as a checkbox in the UI.
+#              Default should be true or false.
+#              Example: Enable/disable features like fall damage, chat, nesting
+#
+#   select     A dropdown menu with predefined choices. Requires an "options"
+#              list with all allowed values. The user picks one.
+#              Example: Server map selection (Island, Panjura, Riparia)
+#
+#   password   A text field that hides the input (shown as dots).
+#              Used for sensitive values like passwords.
+#              Example: Server password, RCON password
+#
 # ─────────────────────────────────────────────
 name: Waystone Settings
 settings:
