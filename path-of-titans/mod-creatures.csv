@@ -1,6 +1,6 @@
 creature,author,sku
 AbsentiaAcro,Absentia,UGC_M_NV57RV2EJD_SK
-
+AbsentiaAgam,Absentia,UGC_M_N2R01D873D_SK
 
 Camarasaurus,Ancient Gods,UGC_M_DYV7XQ60GX_SK
 
@@ -20,6 +20,9 @@ ArazoaLivy,Arazoa,UGC_M_YNRE311081_SK
 ArazoaProg,Arazoa,UGC_M_Z857QV302V_SK
 ArazoaTropeo,Arazoa,UGC_M_4RMEKQWEZY_SK
 ArazoaXiph,Arazoa,UGC_M_6YJ72ZYE58_SK
+EADominus,Arazoa,UGC_M_43GE6R60NR_SK
+EADracoviper,Arazoa,UGC_M_W610844EMD_SK
+EAGriffin,Arazoa,UGC_M_12GEW9PEWK_SK
 
 
 Dunkleosteus,Archetypes,UGC_M_4RMEK5W7ZY_SK
@@ -30,12 +33,23 @@ Squalicorax,Archetypes,UGC_M_6YJ72NJE58_SK
 
 
 AsylumCougar,Asylum,UGC_M_YZK04ZKE9W_SK
+AsylumDeer,Asylum,UGC_M_N2R01M573D_SK
+AsylumWolf,Asylum,UGC_M_63405GX08W_SK
 
 
 CEMEkrixinatosaurus,Candeleros Expansion,UGC_M_6YJE2GYE58_SK
+
+
 CTAndrewsarchus,Cenozoic Timelines,UGC_M_Y25EGKQ0VZ_SK
 CTAnkylorhiza,Cenozoic Timelines,UGC_M_YZK74RK79W_SK
 EuhelopusCRL,Cenozoic Timelines,UGC_M_K5G0Z89EPN_SK
+
+
+Cano,Clayton’s Mods,UGC_M_DYVEX1ZEGX_SK
+CDonut,Clayton’s Mods,UGC_M_250G496EVZ_SK
+CCrabCritter,Clayton’s Mods,UGC_M_JG179850QN_SK
+CTrex,Clayton’s Mods,UGC_M_VJKEMQ30R3_SK
+CCubensis,Clayton’s Mods,UGC_M_43GE6Z1ENR_SK
 
 
 DavidRosaPachyrhino,David Rosa's,UGC_M_43G7646ENR_SK
@@ -62,17 +76,17 @@ DivineSuzou,Divine Beasts,UGC_M_NZKEJGYE12_SK
 DivineZhuch,Divine Beasts,UGC_M_6GW0YYP03Z_SK
 TGBsalamander,Divine Beasts,UGC_M_QM5ENMJ7D3_SK
 Velocciraptor,Divine Beasts,UGC_M_43G069Q0NR_SK
+DivineMutta,Divine Beasts,UGC_M_NV5ERN27JD_SK
+
+
+ERCarcharodontosaurus,El Reptileano,UGC_M_NZK0J2Y012_SK
 
 
 BeringiaMammothC,Ex Argilla,UGC_M_RD17PN2EXG_SK
 EAAnt,Ex Argilla,UGC_M_YNR0331081_SK
-EADominus,Ex Argilla,UGC_M_43GE6R60NR_SK
-EADracoviper,Ex Argilla,UGC_M_W610844EMD_SK
 EAGigarachne,Ex Argilla,UGC_M_W61088W0MD_SK
-EAGriffin,Ex Argilla,UGC_M_12GEW9PEWK_SK
 EANasuto,Ex Argilla,UGC_M_6GWEYR373Z_SK
 EASmilodon,Ex Argilla,UGC_M_JG1E9D97QN_SK
-ExAAllo,Ex Argilla,UGC_M_NV50R62EJD_SK
 ExAAustralo,Ex Argilla,UGC_M_YZKE41GE9W_SK
 ExABista,Ex Argilla,UGC_M_K5G7Z2Y0PN_SK
 ExAGlowplume,Ex Argilla,UGC_M_YZK048G79W_SK
@@ -87,7 +101,13 @@ GDiplocaulus,Great,UGC_M_N590DMZ0WQ_SK
 GTenontosaurus,Great,UGC_M_N590DRNEWQ_SK
 
 
+ExAAllo,In Ventum,UGC_M_NV50R62EJD_SK
+
+
 Nyctatyrannus,Isla Nycta,UGC_M_K5G0Z310PN_SK
+
+
+
 SpearcrestNew,Isle of Myths,UGC_M_N2R711873D_SK
 
 
@@ -120,6 +140,7 @@ IgnisNoviana,Primordial Tyrants,UGC_M_Z857Q9P72V_SK
 IgnisOphis,Primordial Tyrants,UGC_M_6YJ026J758_SK
 PTApatosaurus,Primordial Tyrants,UGC_M_QM50NNJ0D3_SK
 PTArgent,Primordial Tyrants,UGC_M_Z857QJG02V_SK
+PTAustroraptor,Primordial Tyrants,UGC_M_634E5V5E8W_SK
 PTCarno,Primordial Tyrants,UGC_M_YZK04PD79W_SK
 PTDilophosaurus,Primordial Tyrants,UGC_M_DYVEXZ57GX_SK
 PTGiga,Primordial Tyrants,UGC_M_DYV7X6Y0GX_SK
@@ -147,3 +168,4 @@ TCCitipati,Titanus Constructus,UGC_M_YNRE3PY781_SK
 
 
 TSGBonapartenykus,TSG,UGC_M_YZK74NG09W_SK
+TSGDesmatosuchus,TSG,UGC_M_N597D3GEWQ_SK

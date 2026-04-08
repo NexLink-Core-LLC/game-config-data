@@ -122,8 +122,7 @@ settings:
     type: checkbox
     repeatable: false
     default: ""
-    helpText: Enables or disables the ability for ALL players on the server to see
-      player nametags.
+    helpText: Enables or disables the ability for ALL players on the server to see player nametags.
 
   - property: bServerFallDamage=
     section: "[/Script/PathOfTitans.IGameSession]"
