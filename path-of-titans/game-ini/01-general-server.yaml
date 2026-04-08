@@ -46,6 +46,8 @@ settings:
     default: ""
     helpText: Max player slots on the server
     step: 1
+    min: 1
+    max: 200
     fullWidth: false
 
   - property: ReservedSlots=
@@ -63,7 +65,7 @@ settings:
     configType: server-variable
     label: Server Discord
     type: text
-    default: gsh
+    default: nlcore
     helpText: Add your Discord link so players can connect to your Discord server!
 
   - property: SERVER_PASSWORD
