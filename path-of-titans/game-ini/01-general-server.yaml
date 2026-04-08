@@ -104,7 +104,7 @@ settings:
   - property: SERVER_PASSWORD
     configType: server-variable
     label: Server Password
-    type: text
+    type: password
     default: ""
     helpText: Sets a password to enter the server. Leave blank for no password.
 
