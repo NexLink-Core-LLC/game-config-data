@@ -63,7 +63,7 @@ settings:
   - property: ServerMap
     section: "[/Script/PathOfTitans.IGameSession]"
     label: Server Map
-    default: Island
+    default: Panjura
     helpText: The map the server will load with.
     type: select
     options:
