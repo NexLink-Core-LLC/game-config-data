@@ -148,7 +148,7 @@ settings:
     repeatable: false
     default: 0.25
     helpText: Specifies the growth a player will have when they exit the Hatchling
-      Caves. `0` denotes a hatchling and is the default value.
+      Caves. `0` denotes a hatchling.
     section: "[/Script/PathOfTitans.IGameSession]"
   -
     subheader: ""
