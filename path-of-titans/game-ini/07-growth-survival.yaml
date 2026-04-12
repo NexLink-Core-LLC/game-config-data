@@ -142,10 +142,11 @@ settings:
     property: HatchlingCaveExitGrowth=
     label: Hatchling Cave Exit Growth
     type: number
+    steps: 0.01
     min: 0
     max: 1
     repeatable: false
-    default: 0
+    default: 0.25
     helpText: Specifies the growth a player will have when they exit the Hatchling
       Caves. `0` denotes a hatchling and is the default value.
     section: "[/Script/PathOfTitans.IGameSession]"
