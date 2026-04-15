@@ -218,4 +218,4 @@ settings:
     label: Default Creator Mode Save
     type: text
     default: ""
-    helpText: The default save slot used for Creator Mode when no save is specified. This should be the name of an existing save file on the server. This is case sensitive and must match the name of a save file in the Creator Mode saves directory. Example: "MyCreatorModeSave". If left blank, Creator Mode will require players to select a save slot each time they enter Creator Mode.
+    helpText: 'The default save slot used for Creator Mode when no save is specified. This should be the name of an existing save file on the server. This is case sensitive and must match the name of a save file in the Creator Mode saves directory. Example: "MyCreatorModeSave". If left blank,   Creator Mode will require players to select a save slot each time they enter Creator Mode.'
