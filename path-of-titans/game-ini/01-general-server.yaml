@@ -212,3 +212,10 @@ settings:
     default: 60
     helpText: The duration (in seconds) that a server footprint remains active after
       a player leaves.
+
+  - property: DefaultCreatorModeSave=
+    section: "[/Script/PathOfTitans.IGameMode]"
+    label: Default Creator Mode Save
+    type: text
+    default: ""
+    helpText: The default save slot used for Creator Mode when no save is specified. This should be the name of an existing save file on the server. This is case sensitive and must match the name of a save file in the Creator Mode saves directory. Example: "MyCreatorModeSave". If left blank, Creator Mode will require players to select a save slot each time they enter Creator Mode.
