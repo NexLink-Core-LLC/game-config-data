@@ -52,16 +52,14 @@
 name: Water # Water & Environmental Systems Environmental Systems
 settings:
   -
-    subheader: ""
     property: bServerWaterQualitySystem=
     label: Water Quality System
     type: checkbox
     repeatable: false
     default: true
-    helpText: ""
+    helpText: "Enables or disables the water quality system."
     section: "[/Script/PathOfTitans.IGameSession]"
   -
-    subheader: ""
     property: bOverrideWaterRegeneration=
     label: Override Water Regeneration
     type: checkbox
@@ -77,7 +75,7 @@ settings:
     label: Enable Water Regeneration
     type: checkbox
     repeatable: false
-    default: false
+    default: true
     helpText: Enables or disables water regeneration for players. If this is
       disabled, please ensure you have water restoration quests on the map you
       are hosting, otherwise you will eventually run out of water.
