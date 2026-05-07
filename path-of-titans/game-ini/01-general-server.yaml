@@ -67,7 +67,7 @@ settings:
     helpText: The map the server will load with.
     type: select
     options:
-      - Island
+      - Gondwa
       - Panjura
       - Riparia
 
