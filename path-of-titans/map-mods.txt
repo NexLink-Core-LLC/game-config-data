@@ -64,3 +64,6 @@ UGC_M_K5G0Z1Y7PN_SK
 
 #Slu
 UGC_M_634E53Y08W_SK
+
+#EOV Creations: Auralis Frontier
+UGC_M_857Q88202V_SK
