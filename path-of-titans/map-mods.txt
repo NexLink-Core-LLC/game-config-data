@@ -67,3 +67,6 @@ UGC_M_634E53Y08W_SK
 
 #Asylum Ranch
 UGC_M_RD1EPKZ0XG_SK
+
+#EOV Creations: Auralis Frontier
+UGC_M_857Q88202V_SK
