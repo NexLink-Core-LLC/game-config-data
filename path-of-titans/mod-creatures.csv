@@ -35,6 +35,9 @@ Squalicorax,Archetypes,UGC_M_6YJ72NJE58_SK
 AsylumCougar,Asylum,UGC_M_YZK04ZKE9W_SK
 AsylumDeer,Asylum,UGC_M_N2R01M573D_SK
 AsylumWolf,Asylum,UGC_M_63405GX08W_SK
+AsylumFelinae,Asylum,UGC_M_JG1E9P57QN_SK
+AsylumGiraffe,Asylum,UGC_M_4RMEK247ZY_SK
+AsylumUrsa,Asylum,UGC_M_M5ENY3X7D3_SK
 
 
 CEMEkrixinatosaurus,Candeleros Expansion,UGC_M_6YJE2GYE58_SK
@@ -50,10 +53,16 @@ CDonut,Clayton’s Mods,UGC_M_250G496EVZ_SK
 CCrabCritter,Clayton’s Mods,UGC_M_JG179850QN_SK
 CTrex,Clayton’s Mods,UGC_M_VJKEMQ30R3_SK
 CCubensis,Clayton’s Mods,UGC_M_43GE6Z1ENR_SK
+CRocky,Clayton’s Mods,UGC_M_6178WWREMD_SK
 
 
 DavidRosaPachyrhino,David Rosa's,UGC_M_43G7646ENR_SK
 DRKaprosuchus,David Rosa's,UGC_M_N597DMN7WQ_SK
+
+
+DinosauriaBrachi,Dinosauria,UGC_M_4RMEKV37ZY_SK
+DinosauriaCama,Dinosauria,UGC_M_DYV7X54EGX_SK
+DinosauriaDiplodocus,Dinosauria,UGC_M_N2RE16873D_SK
 
 
 CretaceousKryptops,Divine Beasts,UGC_M_43GE6NQENR_SK
@@ -123,17 +132,31 @@ KTODrypto,KTO,UGC_M_N2RE1Y403D_SK
 KTONanuq,KTO,UGC_M_QM5EN9DED3_SK
 KTOPachyrhino,KTO,UGC_M_Y250GGQ0VZ_SK
 KTOYang,KTO,UGC_M_K5G7ZX1EPN_SK
+KTOTorvo,KTO,UGC_M_Z85EQ6VE2V_SK
+
+
+PlayableSnake,Marvelous Mods,UGC_M_YZK74WY09W_SK
 
 
 MMLisowicia,Mesozoic Monsters,UGC_M_634751808W_SK
 
 
 Ichtyovenator,Pandora,UGC_M_6GWEYVDE3Z_SK
+Pteranodon,Pandora,UGC_M_QM5ENR10D3_SK
+Raptor,Pandora,UGC_M_2R01PPZ73D_SK
 
 
+PDPentaceratops,P&D’s Menagerie,UGC_M_G1E91550QN_SK
+
+
+PXParaceratherium,Prehistoric Expanse,UGC_M_43GE6G17NR_SK
+
+
+PWCeratosaurus,Primal Wrath,UGC_M_4RMEKY37ZY_SK
 PWDimetrodon,Primal Wrath,UGC_M_DYV7XW40GX_SK
 PWDimetrodonMilleri,Primal Wrath,UGC_M_N597DZZEWQ_SK
 PWSaurophaganax,Primal Wrath,UGC_M_Z857QKV72V_SK
+PWPachyrhinosaurus,Primal Wrath,UGC_M_YV7XYRVEGX_SK
 
 
 IgnisNoviana,Primordial Tyrants,UGC_M_Z857Q9P72V_SK
@@ -158,6 +181,9 @@ PTTyrannosaurus,Primordial Tyrants,UGC_M_NV57RRW7JD_SK
 PTUtahraptor,Primordial Tyrants,UGC_M_5XN7VXW0PZ_SK
 PTYunnano,Primordial Tyrants,UGC_M_Y25EGXK7VZ_SK
 PTYutyrannus,Primordial Tyrants,UGC_M_QM5ENGD7D3_SK
+
+
+BayouBrachiosaurus,Tales From The Bayou,UGC_M_N597DQGEWQ_SK
 
 
 CrimsonCryo,The Crimson Isle,UGC_M_N597D9ZEWQ_SK
