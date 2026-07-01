@@ -69,3 +69,47 @@ settings:
     default: true
     helpText: If enabled, the server will randomize the weather settings.
     section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: ""
+    property: WeatherBlendVariation=
+    label: Weather Blend Variation (minutes)
+    type: range
+    repeatable: false
+    default: "1,2"
+    min: 0
+    step: 1
+    fullWidth: false
+    dependsOn: bOverrideWeather=
+    helpText: "Transition time between weather types, in minutes (min to max). Applies when Override Weather is ON."
+    section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: ""
+    property: WeatherLengthVariation=
+    label: Weather Length Variation (minutes)
+    type: range
+    repeatable: false
+    default: "10,20"
+    min: 0
+    step: 1
+    fullWidth: false
+    helpText: "How long each weather type lasts, in minutes (min to max). Applies when Override Weather is OFF."
+    section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: ""
+    property: WeatherEvents=
+    label: Weather Events
+    type: weather-events
+    repeatable: true
+    default: ""
+    fullWidth: true
+    dependsOn: bOverrideWeather=
+    options:
+      - ClearSky
+      - Rain
+      - Fog
+      - Cloudy
+      - Overcast
+      - Snow
+      - Storm
+    helpText: "Custom weather cycle used when Override Weather is ON and Randomize Override Weather is OFF. Events play top to bottom; each lasts a random time between its Min and Max minutes."
+    section: "[/Script/PathOfTitans.IGameSession]"
