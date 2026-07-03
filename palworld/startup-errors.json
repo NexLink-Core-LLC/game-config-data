@@ -1,0 +1,23 @@
+[
+  {
+    "id": "palworld-port-in-use",
+    "patternSource": "bind: address already in use",
+    "message": "The server port is already in use. Another server may be running on the same allocation.",
+    "severity": "error",
+    "games": ["palworld"]
+  },
+  {
+    "id": "palworld-steam-update-failed",
+    "patternSource": "Steam Console Client .* (ERROR|FAILED)",
+    "message": "SteamCMD failed to update the server. Retry the install/update, or check disk space.",
+    "severity": "warning",
+    "games": ["palworld"]
+  },
+  {
+    "id": "palworld-rcon-auth-failed",
+    "patternSource": "(RCON|rcon).*(auth|authentication).*fail",
+    "message": "RCON authentication failed. Check that the Admin Password startup variable is set.",
+    "severity": "warning",
+    "games": ["palworld"]
+  }
+]

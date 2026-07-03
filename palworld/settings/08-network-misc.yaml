@@ -1,0 +1,77 @@
+# ─────────────────────────────────────────────
+# Palworld — Network, API & Misc
+# All settings map into OptionSettings=(...) in PalWorldSettings.ini.
+#
+# NOTE: RCON is managed by the server image (the startup command enables RCON
+# and the RCON port is a read-only startup variable), so RCONEnabled / RCONPort
+# are intentionally NOT exposed here.
+# ─────────────────────────────────────────────
+name: Network, API & Misc
+settings:
+
+  - property: RESTAPIEnabled
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Enable REST API
+    type: checkbox
+    default: false
+    helpText: Enable the Palworld REST API for remote administration.
+
+  - property: RESTAPIPort
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: REST API Port
+    type: number
+    default: 8212
+    step: 1
+    min: 1024
+    max: 65535
+    dependsOn: RESTAPIEnabled
+    helpText: TCP port the REST API listens on.
+
+  - property: bUseAuth
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Require Authentication
+    type: checkbox
+    default: true
+    helpText: Require players to be authenticated to connect. Recommended to leave enabled.
+
+  - property: bShowPlayerList
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Show Player List
+    type: checkbox
+    default: false
+    helpText: Make the server's player list publicly visible.
+
+  - property: AllowConnectPlatform
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Allowed Platform
+    type: select
+    default: Steam
+    options:
+      - Steam
+      - Xbox
+    helpText: Which platform players are allowed to connect from.
+
+  - property: bIsUseBackupSaveData
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Enable Save Backups
+    type: checkbox
+    default: true
+    helpText: Automatically create backups of world save data.
+
+  - property: LogFormatType
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Log Format
+    type: select
+    default: Text
+    options:
+      - Text
+      - Json
+    helpText: Format used for server log output.
+
+  - property: BanListURL
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Ban List URL
+    type: text
+    default: https://api.palworldgame.com/api/banlist.txt
+    fullWidth: true
+    helpText: URL of the ban list the server checks against. Leave as default unless self-hosting a ban list.

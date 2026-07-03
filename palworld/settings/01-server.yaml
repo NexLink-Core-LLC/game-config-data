@@ -1,0 +1,118 @@
+# ─────────────────────────────────────────────
+# Palworld — Server Settings
+# ─────────────────────────────────────────────
+#
+# Field reference (see path-of-titans/game-ini/01-general-server.yaml for the
+# full documented field list). Palworld notes:
+#
+#   * All Game.ini-style settings below map into the single
+#     OptionSettings=(...) line under [/Script/Pal.PalGameWorldSettings]
+#     in PalWorldSettings.ini. The panel's Palworld parser handles packing
+#     each `property` into that line — you only list the keys here.
+#
+#   * Entries with `configType: server-variable` are Pterodactyl startup
+#     variables (managed on the Startup tab), NOT OptionSettings.
+#
+#   * IMPORTANT — do NOT add OptionSettings entries for ServerName,
+#     ServerDescription, ServerPassword, AdminPassword, ServerPlayerMaxNum,
+#     PublicPort or RCONPort. The server image's PalworldServerConfigParser
+#     injects those into PalWorldSettings.ini from the startup variables on
+#     every boot, so editing them in the .ini would be overwritten. They live
+#     here as server-variables instead.
+#
+# ─────────────────────────────────────────────
+name: Server Settings
+settings:
+
+  - property: SERVER_NAME
+    configType: server-variable
+    label: Server Name
+    type: text
+    default: A Pterodactyl hosted Palworld Server
+    helpText: The name shown in the in-game server browser (max 64 characters).
+
+  - property: SERVER_DESCRIPTION
+    configType: server-variable
+    label: Server Description
+    type: text
+    default: ""
+    helpText: A short description of your server (max 128 characters).
+    fullWidth: true
+
+  - property: MAX_PLAYERS
+    configType: server-variable
+    label: Max Players
+    type: number
+    default: 32
+    step: 1
+    min: 1
+    max: 32
+    helpText: Maximum number of players allowed on the server (1–32).
+
+  - property: SERVER_PASSWORD
+    configType: server-variable
+    label: Server Password
+    type: password
+    default: ""
+    helpText: If set, players must enter this password to join. Leave blank for a public server.
+
+  - property: ADMIN_PASSWORD
+    configType: server-variable
+    label: Admin Password
+    type: password
+    default: ""
+    helpText: Password used to access admin commands via in-game chat or RCON.
+
+  - property: AUTO_UPDATE
+    configType: server-variable
+    label: Auto Update
+    type: checkbox
+    default: true
+    helpText: Automatically update the server to the latest Palworld build on start.
+
+  # ── OptionSettings (PalWorldSettings.ini) ──────────────────────────────
+
+  - property: Difficulty
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Difficulty
+    type: select
+    default: None
+    options:
+      - None
+      - Casual
+      - Normal
+      - Hard
+    helpText: Overall difficulty preset. "None" uses the individual rate settings below.
+
+  - property: DeathPenalty
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Death Penalty
+    type: select
+    default: All
+    options:
+      - None
+      - Item
+      - ItemAndEquipment
+      - All
+    helpText: What a player drops on death. None = drop nothing; All = drop items, equipment and Pals.
+
+  - property: bHardcore
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Hardcore Mode
+    type: checkbox
+    default: false
+    helpText: When enabled, player characters are permanently lost on death.
+
+  - property: bPalLost
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Lose Pals on Death
+    type: checkbox
+    default: false
+    helpText: When enabled, Pals in the party are lost when the player dies.
+
+  - property: bEnableNonLoginPenalty
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Inactivity Penalty
+    type: checkbox
+    default: true
+    helpText: Apply a penalty (item decay) for players who have not logged in for a long time.

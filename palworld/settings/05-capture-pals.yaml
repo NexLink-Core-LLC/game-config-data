@@ -1,0 +1,43 @@
+# ─────────────────────────────────────────────
+# Palworld — Pals & Capture
+# All settings map into OptionSettings=(...) in PalWorldSettings.ini.
+# ─────────────────────────────────────────────
+name: Pals & Capture
+settings:
+
+  - property: PalCaptureRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Pal Capture Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.5
+    max: 2
+    helpText: Multiplier for the chance to successfully capture a Pal.
+
+  - property: PalSpawnNumRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Pal Spawn Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.1
+    max: 3
+    helpText: Multiplier for the number of Pals that spawn in the world.
+
+  - property: bActiveUNKO
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Enable UNKO
+    type: checkbox
+    default: false
+    helpText: Enables the "UNKO" hidden feature (increased special item drops). Leave off for normal play.
+
+  - property: DropItemMaxNum_UNKO
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Max UNKO Drops
+    type: number
+    default: 100
+    step: 1
+    min: 0
+    max: 5000
+    helpText: Maximum number of UNKO-related dropped items allowed in the world at once.

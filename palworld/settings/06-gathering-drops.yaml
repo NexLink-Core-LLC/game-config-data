@@ -1,0 +1,93 @@
+# ─────────────────────────────────────────────
+# Palworld — Gathering, Drops & Building
+# All settings map into OptionSettings=(...) in PalWorldSettings.ini.
+# ─────────────────────────────────────────────
+name: Gathering, Drops & Building
+settings:
+
+  - property: CollectionDropRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Gatherable Drop Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.5
+    max: 3
+    helpText: Multiplier for items gathered from nodes (trees, ore, etc.).
+
+  - property: CollectionObjectHpRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Gatherable Node Health
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.5
+    max: 3
+    helpText: Multiplier for the health of gatherable nodes (higher = takes longer to harvest).
+
+  - property: CollectionObjectRespawnSpeedRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Gatherable Respawn Speed
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.5
+    max: 3
+    helpText: Multiplier for how quickly gatherable nodes respawn.
+
+  - property: EnemyDropItemRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Enemy Drop Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.5
+    max: 3
+    helpText: Multiplier for items dropped by defeated enemies and Pals.
+
+  - property: DropItemMaxNum
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Max Dropped Items
+    type: number
+    default: 3000
+    step: 100
+    min: 0
+    max: 10000
+    helpText: Maximum number of dropped items allowed in the world at once.
+
+  - property: DropItemAliveMaxHours
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Dropped Item Lifetime (hours)
+    type: number
+    default: 1
+    step: 0.5
+    min: 0
+    max: 48
+    helpText: How long dropped items remain in the world before despawning.
+
+  - property: bCanPickupOtherGuildDeathPenaltyDrop
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Loot Other Guilds' Death Drops
+    type: checkbox
+    default: false
+    helpText: Allow players to pick up items dropped by members of other guilds on death.
+
+  - property: BuildObjectDamageRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Structure Damage Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.5
+    max: 3
+    helpText: Multiplier for damage dealt to buildable structures.
+
+  - property: BuildObjectDeteriorationDamageRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Structure Deterioration Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0
+    max: 3
+    helpText: Multiplier for how fast structures deteriorate over time. Set to 0 to disable decay.

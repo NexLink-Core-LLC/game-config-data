@@ -1,0 +1,64 @@
+# ─────────────────────────────────────────────
+# Palworld — Base Camp & Guild
+# All settings map into OptionSettings=(...) in PalWorldSettings.ini.
+# ─────────────────────────────────────────────
+name: Base Camp & Guild
+settings:
+
+  - property: BaseCampMaxNum
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Max Base Camps
+    type: number
+    default: 128
+    step: 1
+    min: 1
+    max: 512
+    helpText: Maximum number of base camps allowed on the server.
+
+  - property: BaseCampWorkerMaxNum
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Max Base Workers
+    type: number
+    default: 15
+    step: 1
+    min: 1
+    max: 50
+    helpText: Maximum number of working Pals assigned to a single base camp.
+
+  - property: GuildPlayerMaxNum
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Max Guild Members
+    type: number
+    default: 20
+    step: 1
+    min: 1
+    max: 100
+    helpText: Maximum number of players allowed in a single guild.
+
+  - property: CoopPlayerMaxNum
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Max Co-op Players Per Guild
+    type: number
+    default: 4
+    step: 1
+    min: 1
+    max: 32
+    helpText: Maximum number of players that can belong to the same base guild in co-op.
+
+  - property: bAutoResetGuildNoOnlinePlayers
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Auto-Reset Inactive Guilds
+    type: checkbox
+    default: false
+    helpText: Automatically disband guilds that have had no players online for a set time.
+
+  - property: AutoResetGuildTimeNoOnlinePlayers
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Guild Reset Time (hours)
+    type: number
+    default: 72
+    step: 1
+    min: 1
+    max: 720
+    dependsOn: bAutoResetGuildNoOnlinePlayers
+    helpText: Hours of no online guild members before a guild is auto-reset.

@@ -10,6 +10,17 @@ Community-managed game server configuration data for the [NexLink Core Panel](ht
 
 ```
 game-config-data/
+  palworld/
+    settings/                         # PalWorldSettings.ini OptionSettings (split by group)
+      01-server.yaml
+      02-world.yaml
+      03-combat-pvp.yaml
+      04-survival.yaml
+      05-capture-pals.yaml
+      06-gathering-drops.yaml
+      07-base-guild.yaml
+      08-network-misc.yaml
+    startup-errors.json               # Console error detection patterns
   path-of-titans/
     game-ini/                         # Game.ini settings (split by section)
       01-general-server.yaml
@@ -68,6 +79,42 @@ settings:
 **To reorder sections:** Rename the number prefix (e.g., rename `05-` to `03-` to move it earlier).
 
 **To add a new section:** Create a new numbered YAML file (e.g., `17-new-section.yaml`) with the same format.
+
+---
+
+### `palworld/settings/*.yaml` — Palworld Settings Schema
+
+Same YAML format as the Path of Titans `game-ini/*.yaml` files, but the settings
+map into Palworld's single `OptionSettings=(...)` line under
+`[/Script/Pal.PalGameWorldSettings]` in `PalWorldSettings.ini`. You only list
+each `property` (the OptionSettings key) — the panel's Palworld parser handles
+packing them into that line.
+
+```yaml
+# Example: palworld/settings/02-world.yaml
+name: World & Progression
+settings:
+  - property: ExpRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: EXP Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.1
+    max: 20
+    helpText: Multiplier for all experience gained.
+```
+
+**Server variables vs. OptionSettings:** entries tagged `configType: server-variable`
+are Pterodactyl startup variables (Server Name, passwords, Max Players, Auto
+Update), not OptionSettings.
+
+> **⚠ Do not add OptionSettings for `ServerName`, `ServerDescription`,
+> `ServerPassword`, `AdminPassword`, `ServerPlayerMaxNum`, `PublicPort`, or the
+> RCON fields.** The server image's `PalworldServerConfigParser` injects those
+> into `PalWorldSettings.ini` from the startup variables on every boot, so any
+> value set in the `.ini` editor would be overwritten. They are exposed as
+> startup variables instead.
 
 ---
 

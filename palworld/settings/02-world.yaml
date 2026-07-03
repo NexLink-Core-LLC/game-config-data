@@ -1,0 +1,77 @@
+# ─────────────────────────────────────────────
+# Palworld — World & Progression
+# All settings map into OptionSettings=(...) in PalWorldSettings.ini.
+# ─────────────────────────────────────────────
+name: World & Progression
+settings:
+
+  - property: DayTimeSpeedRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Day Time Speed
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.1
+    max: 5
+    helpText: How fast daytime passes. Higher = shorter days.
+
+  - property: NightTimeSpeedRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Night Time Speed
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.1
+    max: 5
+    helpText: How fast nighttime passes. Higher = shorter nights.
+
+  - property: ExpRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: EXP Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.1
+    max: 20
+    helpText: Multiplier for all experience gained by players and Pals.
+
+  - property: WorkSpeedRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Work Speed Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.1
+    max: 20
+    helpText: Multiplier for how fast Pals perform work at your base.
+
+  - property: PalEggDefaultHatchingTime
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Egg Hatching Time (hours)
+    type: number
+    default: 72
+    step: 1
+    min: 0
+    max: 240
+    helpText: Base time in hours for a Pal egg to hatch. Set to 0 for instant hatching.
+
+  - property: bEnableFastTravel
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Enable Fast Travel
+    type: checkbox
+    default: true
+    helpText: Allow players to fast travel between unlocked statues.
+
+  - property: bIsStartLocationSelectByMap
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Choose Start Location on Map
+    type: checkbox
+    default: true
+    helpText: Let players pick their starting location from the map on first join.
+
+  - property: bExistPlayerAfterLogout
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Keep Player After Logout
+    type: checkbox
+    default: false
+    helpText: Keep the player's body in the world after they log out.
