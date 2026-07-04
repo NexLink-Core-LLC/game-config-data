@@ -91,3 +91,50 @@ settings:
     min: 0
     max: 3
     helpText: Multiplier for how fast structures deteriorate over time. Set to 0 to disable decay.
+
+  - property: MaxBuildingLimitNum
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Max Buildings Per Player
+    type: number
+    default: 0
+    step: 1
+    min: 0
+    max: 10000
+    helpText: Maximum number of structures a single player can place. 0 = unlimited.
+
+  - property: bBuildAreaLimit
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Restrict Building Near Structures
+    type: checkbox
+    default: false
+    helpText: Prevent building near key structures such as fast-travel points.
+
+  - property: EquipmentDurabilityDamageRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Equipment Durability Loss Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0
+    max: 3
+    helpText: Multiplier for how fast equipment loses durability. Set to 0 to disable durability loss.
+
+  - property: ItemWeightRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Item Weight Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0
+    max: 5
+    helpText: Multiplier for the weight of all items. Lower = carry more; set to 0 for weightless items.
+
+  - property: ItemCorruptionMultiplier
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Item Corruption Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0
+    max: 5
+    helpText: Multiplier for how fast perishable items corrupt/spoil. Set to 0 to disable spoilage.

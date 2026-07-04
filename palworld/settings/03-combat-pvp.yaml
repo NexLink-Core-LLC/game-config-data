@@ -93,3 +93,48 @@ settings:
     type: checkbox
     default: false
     helpText: Enable aim assist for keyboard/mouse players.
+
+  # ── PvP kill drops & map visibility ───────────────────────────────────
+
+  - property: bAdditionalDropItemWhenPlayerKillingInPvPMode
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Drop Item on PvP Kill
+    type: checkbox
+    default: false
+    dependsOn: bIsPvP
+    helpText: When enabled, killing a player in PvP drops an additional configurable item.
+
+  - property: AdditionalDropItemWhenPlayerKillingInPvPMode
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: PvP Kill Drop Item ID
+    type: text
+    default: ""
+    dependsOn: bAdditionalDropItemWhenPlayerKillingInPvPMode
+    helpText: ID of the item dropped when a player is killed in PvP.
+
+  - property: AdditionalDropItemNumWhenPlayerKillingInPvPMode
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: PvP Kill Drop Quantity
+    type: number
+    default: 0
+    step: 1
+    min: 0
+    max: 100
+    dependsOn: bAdditionalDropItemWhenPlayerKillingInPvPMode
+    helpText: Quantity of the configured item dropped when a player is killed in PvP.
+
+  - property: bDisplayPvPItemNumOnWorldMap_Player
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Show PvP Items on Map (Players)
+    type: checkbox
+    default: true
+    dependsOn: bIsPvP
+    helpText: Show player locations and their PvP-exclusive item counts on the world map.
+
+  - property: bDisplayPvPItemNumOnWorldMap_BaseCamp
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Show PvP Items on Map (Bases)
+    type: checkbox
+    default: true
+    dependsOn: bIsPvP
+    helpText: Show the number of PvP-exclusive items held at each base on the world map.

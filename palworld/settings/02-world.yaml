@@ -62,6 +62,14 @@ settings:
     default: true
     helpText: Allow players to fast travel between unlocked statues.
 
+  - property: bEnableFastTravelOnlyBaseCamp
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Fast Travel Only Between Bases
+    type: checkbox
+    default: false
+    dependsOn: bEnableFastTravel
+    helpText: Restrict fast travel so players can only warp between their own base camps.
+
   - property: bIsStartLocationSelectByMap
     section: "[/Script/Pal.PalGameWorldSettings]"
     label: Choose Start Location on Map
@@ -75,3 +83,87 @@ settings:
     type: checkbox
     default: false
     helpText: Keep the player's body in the world after they log out.
+
+  # ── Stat point allocation ─────────────────────────────────────────────
+
+  - property: bAllowEnhanceStat_Health
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Allow Stat Points → HP
+    type: checkbox
+    default: true
+    helpText: Allow players to spend stat points to increase their maximum HP.
+
+  - property: bAllowEnhanceStat_Attack
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Allow Stat Points → Attack
+    type: checkbox
+    default: true
+    helpText: Allow players to spend stat points to increase their attack.
+
+  - property: bAllowEnhanceStat_Stamina
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Allow Stat Points → Stamina
+    type: checkbox
+    default: true
+    helpText: Allow players to spend stat points to increase their stamina.
+
+  - property: bAllowEnhanceStat_Weight
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Allow Stat Points → Carry Weight
+    type: checkbox
+    default: true
+    helpText: Allow players to spend stat points to increase their carry weight.
+
+  - property: bAllowEnhanceStat_WorkSpeed
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Allow Stat Points → Work Speed
+    type: checkbox
+    default: true
+    helpText: Allow players to spend stat points to increase their work speed.
+
+  # ── World events & randomizer ─────────────────────────────────────────
+
+  - property: SupplyDropSpan
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Supply Drop Interval (minutes)
+    type: number
+    default: 180
+    step: 1
+    min: 0
+    max: 1440
+    helpText: Interval in minutes between meteorite / supply drops in the world.
+
+  - property: RandomizerType
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Pal Randomizer Mode
+    type: select
+    default: None
+    options:
+      - None
+      - Region
+      - All
+    helpText: Pal spawn randomization. None = no randomization; Region = shuffled within each region; All = fully randomized.
+
+  - property: RandomizerSeed
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Randomizer Seed
+    type: text
+    default: ""
+    dependsOn: RandomizerType
+    helpText: Seed used when the Pal randomizer is enabled. Leave blank for a random seed.
+
+  - property: bIsRandomizerPalLevelRandom
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Randomize Pal Levels
+    type: checkbox
+    default: false
+    dependsOn: RandomizerType
+    helpText: When on, wild Pal levels are fully random. When off, levels stay within each area's intended range.
+
+  - property: DenyTechnologyList
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Disabled Technologies
+    type: text
+    default: ""
+    fullWidth: true
+    helpText: Comma-separated list of Technology IDs to disable (prevents players from unlocking them). Leave blank to allow all.

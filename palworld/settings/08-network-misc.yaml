@@ -41,15 +41,16 @@ settings:
     default: false
     helpText: Make the server's player list publicly visible.
 
-  - property: AllowConnectPlatform
+  - property: CrossplayPlatforms
     section: "[/Script/Pal.PalGameWorldSettings]"
-    label: Allowed Platform
-    type: select
-    default: Steam
-    options:
-      - Steam
-      - Xbox
-    helpText: Which platform players are allowed to connect from.
+    label: Crossplay Platforms
+    type: text
+    default: Steam,Xbox,PS5,Mac
+    fullWidth: true
+    helpText: >-
+      Comma-separated list of platforms allowed to connect (Steam, Xbox, PS5, Mac).
+      Replaces the deprecated AllowConnectPlatform setting. The panel wraps this into
+      CrossplayPlatforms=(...) in PalWorldSettings.ini.
 
   - property: bIsUseBackupSaveData
     section: "[/Script/Pal.PalGameWorldSettings]"
@@ -75,3 +76,47 @@ settings:
     default: https://api.palworldgame.com/api/banlist.txt
     fullWidth: true
     helpText: URL of the ban list the server checks against. Leave as default unless self-hosting a ban list.
+
+  - property: bAllowClientMod
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Allow Client Mods
+    type: checkbox
+    default: false
+    helpText: Allow players who have mods enabled to join the server.
+
+  - property: bIsShowJoinLeftMessage
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Show Join/Leave Messages
+    type: checkbox
+    default: true
+    helpText: Show in-game chat messages when players join or leave the server.
+
+  - property: ChatPostLimitPerMinute
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Chat Rate Limit (per minute)
+    type: number
+    default: 10
+    step: 1
+    min: 0
+    max: 300
+    helpText: Maximum number of chat messages a player may send per minute (anti-spam).
+
+  - property: ServerReplicatePawnCullDistance
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Pal Sync Distance (cm)
+    type: number
+    default: 15000
+    step: 1000
+    min: 5000
+    max: 15000
+    helpText: Distance from a player at which Pals are synced. Lower values reduce network/CPU load.
+
+  - property: ItemContainerForceMarkDirtyInterval
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Container Sync Interval (seconds)
+    type: number
+    default: 1
+    step: 1
+    min: 0
+    max: 60
+    helpText: How often, in seconds, an open storage container is force-synced. Higher values reduce load at the cost of sync latency.

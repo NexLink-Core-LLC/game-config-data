@@ -25,6 +25,16 @@ settings:
     max: 50
     helpText: Maximum number of working Pals assigned to a single base camp.
 
+  - property: BaseCampMaxNumInGuild
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Max Base Camps Per Guild
+    type: number
+    default: 4
+    step: 1
+    min: 1
+    max: 10
+    helpText: Maximum number of base camps a single guild may own (max 10). Higher values increase server load.
+
   - property: GuildPlayerMaxNum
     section: "[/Script/Pal.PalGameWorldSettings]"
     label: Max Guild Members
@@ -62,3 +72,34 @@ settings:
     max: 720
     dependsOn: bAutoResetGuildNoOnlinePlayers
     helpText: Hours of no online guild members before a guild is auto-reset.
+
+  - property: GuildRejoinCooldownMinutes
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Guild Rejoin Cooldown (minutes)
+    type: number
+    default: 0
+    step: 1
+    min: 0
+    max: 1440
+    helpText: How long a player must wait before rejoining a guild after leaving. 0 = no cooldown.
+
+  - property: bInvisibleOtherGuildBaseCampAreaFX
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Hide Other Guilds' Base Boundaries
+    type: checkbox
+    default: false
+    helpText: Hide the visual base-area boundary effect for base camps belonging to other guilds.
+
+  - property: bAllowGlobalPalboxExport
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Allow Global Palbox Export
+    type: checkbox
+    default: true
+    helpText: Allow players to save Pals from this server to the Global Palbox.
+
+  - property: bAllowGlobalPalboxImport
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Allow Global Palbox Import
+    type: checkbox
+    default: true
+    helpText: Allow players to load Pals from the Global Palbox onto this server.
