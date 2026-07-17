@@ -55,6 +55,16 @@ settings:
     max: 10000
     helpText: Maximum number of dropped items allowed in the world at once.
 
+  - property: PhysicsActiveDropItemMaxNum
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Max Physics Dropped Items
+    type: number
+    default: -1
+    step: 1
+    min: -1
+    max: 5000
+    helpText: Maximum number of dropped items that use physics simulation at once. -1 = no limit; lower values reduce CPU load on busy servers.
+
   - property: DropItemAliveMaxHours
     section: "[/Script/Pal.PalGameWorldSettings]"
     label: Dropped Item Lifetime (hours)
@@ -71,6 +81,16 @@ settings:
     type: checkbox
     default: false
     helpText: Allow players to pick up items dropped by members of other guilds on death.
+
+  - property: BuildObjectHpRate
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Structure HP Rate
+    type: number
+    default: 1
+    step: 0.1
+    min: 0.5
+    max: 3
+    helpText: Multiplier for the maximum health of buildable structures.
 
   - property: BuildObjectDamageRate
     section: "[/Script/Pal.PalGameWorldSettings]"

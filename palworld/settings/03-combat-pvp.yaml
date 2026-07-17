@@ -33,6 +33,13 @@ settings:
     default: true
     helpText: Allow raid/invader enemies to attack bases.
 
+  - property: EnablePredatorBossPal
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Enable Predator Pals
+    type: checkbox
+    default: true
+    helpText: Allow rare Predator (field-boss) Pals to spawn roaming the world.
+
   - property: bEnableDefenseOtherGuildPlayer
     section: "[/Script/Pal.PalGameWorldSettings]"
     label: Defend Against Other Guilds

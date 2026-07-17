@@ -59,6 +59,16 @@ settings:
     default: true
     helpText: Automatically create backups of world save data.
 
+  - property: AutoSaveSpan
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Auto-Save Interval (seconds)
+    type: number
+    default: 30
+    step: 1
+    min: 30
+    max: 3600
+    helpText: How often, in seconds, the world save is written to disk. Higher values reduce periodic lag spikes but risk losing more progress on a crash.
+
   - property: LogFormatType
     section: "[/Script/Pal.PalGameWorldSettings]"
     label: Log Format
@@ -73,7 +83,7 @@ settings:
     section: "[/Script/Pal.PalGameWorldSettings]"
     label: Ban List URL
     type: text
-    default: https://api.palworldgame.com/api/banlist.txt
+    default: https://b.palworldgame.com/api/banlist.txt
     fullWidth: true
     helpText: URL of the ban list the server checks against. Leave as default unless self-hosting a ban list.
 
@@ -90,6 +100,13 @@ settings:
     type: checkbox
     default: true
     helpText: Show in-game chat messages when players join or leave the server.
+
+  - property: bEnableBuildingPlayerUIdDisplay
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Show Structure Owner ID
+    type: checkbox
+    default: false
+    helpText: Display the creator's player ID on placed structures.
 
   - property: ChatPostLimitPerMinute
     section: "[/Script/Pal.PalGameWorldSettings]"

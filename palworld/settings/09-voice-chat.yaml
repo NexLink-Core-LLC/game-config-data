@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────
+# Palworld — Voice Chat
+# All settings map into OptionSettings=(...) in PalWorldSettings.ini.
+# Distances are in centimetres (100 = 1 metre).
+# ─────────────────────────────────────────────
+name: Voice Chat
+settings:
+
+  - property: bEnableVoiceChat
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Enable Voice Chat
+    type: checkbox
+    default: false
+    helpText: Enable in-game proximity voice chat on the server.
+
+  - property: VoiceChatMaxVolumeDistance
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Voice Full-Volume Distance (cm)
+    type: number
+    default: 3000
+    step: 100
+    min: 100
+    max: 15000
+    dependsOn: bEnableVoiceChat
+    helpText: Distance (in cm; 100 = 1 m) up to which another player's voice plays at full volume.
+
+  - property: VoiceChatZeroVolumeDistance
+    section: "[/Script/Pal.PalGameWorldSettings]"
+    label: Voice Cutoff Distance (cm)
+    type: number
+    default: 15000
+    step: 100
+    min: 100
+    max: 30000
+    dependsOn: bEnableVoiceChat
+    helpText: Distance (in cm; 100 = 1 m) beyond which another player's voice becomes inaudible.
