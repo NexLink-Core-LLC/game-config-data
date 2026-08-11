@@ -1,0 +1,282 @@
+# ─────────────────────────────────────────────
+# Field Reference
+# ─────────────────────────────────────────────
+#
+# REQUIRED FIELDS:
+#   property       INI property name (e.g. bServerGrowth=)
+#   label          Display name shown in the panel UI
+#   type           Input type (see Input Types below)
+#   default        Default value when the setting is not set
+#
+# OPTIONAL FIELDS:
+#   helpText       Help description shown to the user
+#   section        INI file section e.g. "[/Script/PathOfTitans.IGameSession]"
+#   subheader      Sub-group label within the section
+#   configType     Set to "server-variable" for Pterodactyl startup variables
+#                  (omit for Game.ini settings)
+#   repeatable     true | false — can this setting appear multiple times
+#   fullWidth      true | false — force the field to take the full row
+#   min            Minimum allowed value (number type only)
+#   max            Maximum allowed value (number type only)
+#   step           Increment step size (number type only, e.g. 1 for whole numbers)
+#   options        List of allowed values (select type only)
+#   dependsOn      Only show this setting when another setting is enabled
+#                  (use the property name, e.g. dependsOn: bServerDynamicTimeOfDay)
+#
+# ─────────────────────────────────────────────
+# Input Types
+# ─────────────────────────────────────────────
+#
+#   text       A free-text input field. The user can type anything.
+#              Example: Server name, Discord invite code
+#
+#   number     A numeric input with optional min/max/step constraints.
+#              Use "min" and "max" to set allowed range.
+#              Use "step" to control increment (e.g. step: 1 for integers,
+#              step: 0.01 for decimals).
+#              Example: Player slots, cooldown timers, growth multipliers
+#
+#   checkbox   A toggle switch (true/false). Shows as a checkbox in the UI.
+#              Default should be true or false.
+#              Example: Enable/disable features like fall damage, chat, nesting
+#
+#   select     A dropdown menu with predefined choices. Requires an "options"
+#              list with all allowed values. The user picks one.
+#              Example: Server map selection (Island, Panjura, Riparia)
+#
+#   password   A text field that hides the input (shown as dots).
+#              Used for sensitive values like passwords.
+#              Example: Server password, RCON password
+#
+# ─────────────────────────────────────────────
+name: Spawn Limits
+settings:
+  -
+    subheader: ""
+    property: MaxHerbivores=
+    label: Max Herbivores
+    type: number
+    min: 0
+    step: 1
+    repeatable: false
+    default: ""
+    fullWidth: false
+    helpText: "Maximum number of herbivores that can be spawned in at once across the whole server. Leave blank for unlimited. Set to 0 to disable herbivores entirely. Players picking a herbivore while the server is at this limit get an \"Unable to Spawn\" message and stay on the character select screen; slots free up when a creature dies or its player logs out."
+    section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: ""
+    property: MaxCarnivores=
+    label: Max Carnivores
+    type: number
+    min: 0
+    step: 1
+    repeatable: false
+    default: ""
+    fullWidth: false
+    helpText: "Maximum number of carnivores that can be spawned in at once across the whole server. Leave blank for unlimited. Set to 0 to disable carnivores entirely. Players picking a carnivore while the server is at this limit get an \"Unable to Spawn\" message and stay on the character select screen; slots free up when a creature dies or its player logs out."
+    section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: ""
+    property: CharacterSpawnLimits=
+    label: Per-Species Spawn Limits
+    type: character-spawn-limits
+    repeatable: true
+    default: ""
+    fullWidth: true
+    helpText: "Caps how many of a single species can be spawned in at once, on top of the overall herbivore/carnivore limits. Add one row per creature. Writes as CharacterSpawnLimits=(Character=Anodontosaurus,Max=10). Modded creatures are supported — use the creature name the mod ships."
+    section: "[/Script/PathOfTitans.IGameSession]"
+    options:
+      # ── Alderon default creatures ──
+      - Achillobator
+      - Albertaceratops
+      - Alioramus
+      - Allosaurus
+      - Amargasaurus
+      - Anodontosaurus
+      - Barsboldia
+      - Camptosaurus
+      - Ceratosaurus
+      - Concavenator
+      - Daspletosaurus
+      - Deinocheirus
+      - Deinonychus
+      - Eotriceratops
+      - Eurhinosaurus
+      - Hatzegopteryx
+      - Iguanodon
+      - Kaiwhekea
+      - Kentrosaurus
+      - Lambeosaurus
+      - Latenivenatrix
+      - Megalania
+      - Metriacanthosaurus
+      - Miragaia
+      - Pachycephalosaurus
+      - Pycnonemosaurus
+      - Rhamphorhynchus
+      - Sarcosuchus
+      - Spinosaurus
+      - Stegosaurus
+      - Struthiomimus
+      - Styracosaurus
+      - Suchomimus
+      - Thalassodromeus
+      - Tylosaurus
+      - Tyrannosaurus
+      - Tyrannotitan
+      # ── Modded creatures (see path-of-titans/mod-creatures.csv) ──
+      - AbsentiaAcro
+      - AbsentiaAga
+      - Camarasaurus
+      - AMCerataspida
+      - AMDankanaptera
+      - AMMadrehorn
+      - AMMoraquile
+      - AMThalasrex
+      - DJCCeratosaurus
+      - DJCDryptosaurus
+      - Gigamandra
+      - Golugore
+      - ArazoaLivy
+      - ArazoaProg
+      - ArazoaTropeo
+      - ArazoaXiph
+      - EADominus
+      - EADracoviper
+      - EAGriffin
+      - ArazoaAcro
+      - Dunkleosteus
+      - Gigantoraptor
+      - Hibber
+      - Ocepech
+      - Squalicorax
+      - AsylumCougar
+      - AsylumDeer
+      - AsylumWolf
+      - AsylumFelinae
+      - AsylumGiraffe
+      - AsylumUrsa
+      - CEMEkrixinatosaurus
+      - CTAndrewsarchus
+      - CTAnkylorhiza
+      - EuhelopusCRL
+      - Cano
+      - CDonut
+      - CCrabCritter
+      - CTrex
+      - CCubensis
+      - CRocky
+      - DavidRosaPachyrhino
+      - DRKaprosuchus
+      - DinosauriaBrachi
+      - DinosauriaCama
+      - DinosauriaDiplodocus
+      - CretaceousKryptops
+      - DivineAcroRedux
+      - DivineAmp
+      - DivineAnnectens
+      - DivineCarchar
+      - DivineCompy
+      - DivineDeino
+      - DivineDryo
+      - DivineGiga
+      - DivineHalsz
+      - DivineHeli
+      - DivineInos
+      - DivineMosa
+      - DivineOrca
+      - DivineRegalis
+      - DivineShoni
+      - DivineSuzou
+      - DivineZhuch
+      - TGBsalamander
+      - Velocciraptor
+      - DivineMutta
+      - ERCarcharodontosaurus
+      - BeringiaMammothC
+      - EAAnt
+      - EAGigarachne
+      - EANasuto
+      - EASmilodon
+      - ExAAustralo
+      - ExABista
+      - ExAGlowplume
+      - EoTLC
+      - DTriceratops
+      - ExArchelon
+      - GDiplocaulus
+      - GTenontosaurus
+      - ExAAllo
+      - Nyctatyrannus
+      - SpearcrestNew
+      - JFD_Ariocoloradensis
+      - JFDDagilis
+      - JFDPgracilis
+      - JFDTtanneri
+      - KTODeino
+      - KTODiplocaulus
+      - KTODrypto
+      - KTONanuq
+      - KTOPachyrhino
+      - KTOYang
+      - KTOTorvo
+      - PlayableSnake
+      - MMLisowicia
+      - Ichtyovenator
+      - Pteranodon
+      - Raptor
+      - PDPentaceratops
+      - PXParaceratherium
+      - PWCeratosaurus
+      - PWDimetrodon
+      - PWDimetrodonMilleri
+      - PWSaurophaganax
+      - PWPachyrhinosaurus
+      - IgnisNoviana
+      - IgnisOphis
+      - PTApatosaurus
+      - PTArgent
+      - PTAustroraptor
+      - PTCarno
+      - PTDilophosaurus
+      - PTGiga
+      - PTKelenken
+      - PTLurdusaurus
+      - PTMaip
+      - PTParasaurolophus
+      - PTPsittacosaurus
+      - PTPeloroplites
+      - PTQuetzalcoatlus
+      - PTSachicasaurus
+      - PTTherizinosaurus
+      - PTTorvosaurus
+      - PTTyrannosaurus
+      - PTUtahraptor
+      - PTYunnano
+      - PTYutyrannus
+      - BayouBrachiosaurus
+      - CrimsonCryo
+      - Ampelosaurus
+      - TCCitipati
+      - TSGBonapartenykus
+      - TSGDesmatosuchus
+  -
+    subheader: ""
+    property: bNestingIgnoresSpawnLimit=
+    label: Nesting Ignores Spawn Limits
+    type: checkbox
+    repeatable: false
+    default: true
+    fullWidth: false
+    helpText: "When enabled (default), hatching from a nest bypasses the spawn limits — babies still count toward the limits once they are spawned in. Disable to make nest and baby invites respect the spawn limits."
+    section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: ""
+    property: bAdminIgnoreSpawnLimit=
+    label: Admins Ignore Spawn Limits
+    type: checkbox
+    repeatable: false
+    default: false
+    fullWidth: false
+    helpText: "When enabled, Server Admins can spawn past the spawn limits for admin purposes. Disabled by default — admins are limited like everyone else."
+    section: "[/Script/PathOfTitans.IGameSession]"
