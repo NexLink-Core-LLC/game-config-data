@@ -75,6 +75,15 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
   -
     subheader: "Spawn Limits"
+    property: bEnableMaxHerbivores
+    label: Limit Herbivores
+    type: checkbox
+    repeatable: false
+    default: false
+    fullWidth: false
+    helpText: "Panel-only toggle — not a Game.ini setting. Off leaves MaxHerbivores out of Game.ini entirely, which means unlimited herbivores. Turn on to set a cap."
+  -
+    subheader: "Spawn Limits"
     property: MaxHerbivores=
     label: Max Herbivores
     type: number
@@ -83,8 +92,18 @@ settings:
     repeatable: false
     default: ""
     fullWidth: false
-    helpText: "Maximum number of herbivores that can be spawned in at once across the whole server. Leave blank for unlimited. Set to 0 to disable herbivores entirely. Players picking a herbivore while the server is at this limit get an \"Unable to Spawn\" message and stay on the character select screen; slots free up when a creature dies or its player logs out."
+    dependsOn: bEnableMaxHerbivores
+    helpText: "Maximum number of herbivores that can be spawned in at once across the whole server. Set to 0 to disable herbivores entirely — to allow unlimited herbivores instead, turn off Limit Herbivores above. Players picking a herbivore while the server is at this limit get an \"Unable to Spawn\" message and stay on the character select screen; slots free up when a creature dies or its player logs out."
     section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: "Spawn Limits"
+    property: bEnableMaxCarnivores
+    label: Limit Carnivores
+    type: checkbox
+    repeatable: false
+    default: false
+    fullWidth: false
+    helpText: "Panel-only toggle — not a Game.ini setting. Off leaves MaxCarnivores out of Game.ini entirely, which means unlimited carnivores. Turn on to set a cap."
   -
     subheader: "Spawn Limits"
     property: MaxCarnivores=
@@ -95,7 +114,8 @@ settings:
     repeatable: false
     default: ""
     fullWidth: false
-    helpText: "Maximum number of carnivores that can be spawned in at once across the whole server. Leave blank for unlimited. Set to 0 to disable carnivores entirely. Players picking a carnivore while the server is at this limit get an \"Unable to Spawn\" message and stay on the character select screen; slots free up when a creature dies or its player logs out."
+    dependsOn: bEnableMaxCarnivores
+    helpText: "Maximum number of carnivores that can be spawned in at once across the whole server. Set to 0 to disable carnivores entirely — to allow unlimited carnivores instead, turn off Limit Carnivores above. Players picking a carnivore while the server is at this limit get an \"Unable to Spawn\" message and stay on the character select screen; slots free up when a creature dies or its player logs out."
     section: "[/Script/PathOfTitans.IGameSession]"
   -
     subheader: "Spawn Limits"
