@@ -1,7 +1,7 @@
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **game-config-data** (44 symbols, 39 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **game-config-data** (46 symbols, 41 relationships, 0 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 
@@ -41,3 +41,73 @@ This project is indexed by GitNexus as **game-config-data** (44 symbols, 39 rela
 | Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
 
 <!-- gitnexus:end -->
+
+<!-- NEXLINK_HANDBOOK_SYNC_START -->
+## NexLink Engineering Handbook synchronization
+
+Primary System: TBD
+
+### Obsidian handbook access
+
+The NexLink Engineering Handbook is stored in the
+"NexLink Knowledge Base" Obsidian vault.
+
+Use the configured Obsidian MCP tools to search and read the relevant handbook
+notes before making architectural or behavioral decisions.
+
+After completing meaningful work, update the appropriate Obsidian notes when
+the work changes documented architecture, capabilities, public APIs,
+externally observable behavior, security assumptions, deployment procedures,
+ADRs, current status, known problems, open questions, or roadmap status.
+
+Do not merely recommend documentation updates. Make the updates during the
+same task when Obsidian MCP access is available.
+
+If an update is required but Obsidian cannot be accessed, do not claim that
+the handbook was updated. Report:
+
+- Handbook update required but blocked: <reason>
+- Notes that need updating: <note names or subjects>
+
+When this repository belongs to or affects a documented NexLink System, Capability,
+Product, or Project, load the NexLink Engineering Handbook before making decisions.
+
+Load context general-to-specific:
+
+1. Company
+2. Primary System
+3. Relevant Capabilities
+4. Consuming Product, when applicable
+5. Repository-specific documentation
+
+Before finishing a task, review whether the work changes:
+
+- Architecture
+- Capabilities
+- Public APIs
+- Externally observable behavior
+- Security assumptions
+- Deployment, rollback, or operational procedures
+- ADRs
+- Current Status
+- Known Problems
+- Open Questions
+- Roadmap status
+
+When one of these changes, update the appropriate handbook notes as part of the
+same task.
+
+Do not update the handbook for internal refactors, formatting-only changes,
+local renames, or implementation details that do not alter documented behavior.
+
+Preserve historical ADR wording unless an ADR is explicitly amended or
+superseded. Keep handbook changes incremental and do not reorganize its structure.
+
+Follow any preview-and-approval rules defined by the handbook before editing
+existing documentation.
+
+At completion, report one of:
+
+- Handbook updated: <notes changed>
+- Handbook reviewed; no update required
+<!-- NEXLINK_HANDBOOK_SYNC_END -->
