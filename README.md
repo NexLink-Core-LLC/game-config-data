@@ -36,9 +36,10 @@ game-config-data/
       11-home-cave.yaml
       12-player-lifecycle-security.yaml
       13-character-management.yaml
-      14-weather-system.yaml
-      15-water-environmental.yaml
-      16-network.yaml
+      14-spawn-limits.yaml
+      15-weather-system.yaml
+      16-water-environmental.yaml
+      17-network.yaml
     server-variables-schema.yaml      # Server startup variable schema
     map-mods.txt                      # List of mods that are map replacements
     mod-creatures.csv                 # Mod creature name-to-author mapping
