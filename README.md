@@ -74,6 +74,21 @@ settings:
 
 **Optional fields:** `min`, `max`, `step` (for numbers), `options` (for selects), `repeatable`, `fullWidth`, `dependsOn`
 
+#### Composite types (Path of Titans)
+
+A few Game.ini settings are structs rather than plain values, so the panel renders
+them with a purpose-built row editor instead of a single input. These types need
+`repeatable: true`, `fullWidth: true`, and an `options:` list of creature names
+(modded creatures can also be typed in by hand).
+
+| Type | Emits | Used by |
+|------|-------|---------|
+| `character-spawn-limits` | `CharacterSpawnLimits=(Character=X,Max=N)` | Per-species spawn cap |
+| `character-nest-limits` | `CharacterNestLimits=(Character=X,MaxEggs=N,AllowedFamilyTree=(A,B))` | Per-species egg cap + adoption allowlist |
+
+> These render only if the panel implements the matching editor. Don't invent a new
+> composite type here without a corresponding panel change — it will not display.
+
 **To add a new setting:** Edit the appropriate section file and add a new entry to the `settings` array.
 
 **To reorder sections:** Rename the number prefix (e.g., rename `05-` to `03-` to move it earlier).

@@ -439,3 +439,81 @@ settings:
     helpText: The minimum health percentage a nest must have to apply the nest buff
       to the player.
     section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: "Nest Limits"
+    property: MaxEggsPerNest=
+    label: Max Eggs Per Nest
+    type: number
+    min: 0
+    step: 1
+    repeatable: false
+    default: 5
+    helpText: "The maximum number of eggs that can be laid in a single nest. Set to 0 to disable eggs entirely — nests can still be built, but no eggs will be produced."
+    section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: "Nest Limits"
+    property: CharacterNestLimits=
+    label: Per-Species Nest Limits
+    type: character-nest-limits
+    repeatable: true
+    default: ""
+    fullWidth: true
+    helpText: "Overrides the egg cap for a single species and controls which species that nest can adopt. Add one row per creature. Writes as CharacterNestLimits=(Character=Anodontosaurus,MaxEggs=3,AllowedFamilyTree=(Anodontosaurus,Kentrosaurus)). Leaving the allowed family tree empty restricts adoption to the same species only. This is a per-species override — the server-wide `Enable Same Species Adoption Restriction` setting still applies to any species without a row here. Modded creatures are supported — use the creature name the mod ships."
+    section: "[/Script/PathOfTitans.IGameSession]"
+    options:
+      # ── Alderon default creatures ──
+      - Achillobator
+      - Albertaceratops
+      - Alioramus
+      - Allosaurus
+      - Amargasaurus
+      - Anodontosaurus
+      - Barsboldia
+      - Camptosaurus
+      - Ceratosaurus
+      - Concavenator
+      - Daspletosaurus
+      - Deinocheirus
+      - Deinonychus
+      - Eotriceratops
+      - Eurhinosaurus
+      - Hatzegopteryx
+      - Iguanodon
+      - Kaiwhekea
+      - Kentrosaurus
+      - Lambeosaurus
+      - Latenivenatrix
+      - Megalania
+      - Metriacanthosaurus
+      - Miragaia
+      - Pachycephalosaurus
+      - Pycnonemosaurus
+      - Rhamphorhynchus
+      - Sarcosuchus
+      - Spinosaurus
+      - Stegosaurus
+      - Struthiomimus
+      - Styracosaurus
+      - Suchomimus
+      - Thalassodromeus
+      - Tylosaurus
+      - Tyrannosaurus
+      - Tyrannotitan
+  -
+    subheader: "Nest Limits"
+    property: bNestEggRegeneration=
+    label: Enable Nest Egg Regeneration
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: "When enabled (default), a nest keeps regenerating eggs over time. Disable to allow only one clutch of eggs per nest — once that clutch is used, players must build a new nest to get more eggs."
+    section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: "Nest Limits"
+    property: bServerNestQuests=
+    label: Enable Nest Quests
+    type: checkbox
+    repeatable: false
+    default: true
+    helpText: "When enabled (default), nest-related quests are available to players. Disable to turn off all nest quests server-wide."
+    section: "[/Script/PathOfTitans.IGameSession]"
