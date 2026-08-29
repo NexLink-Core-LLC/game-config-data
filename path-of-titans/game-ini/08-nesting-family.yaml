@@ -452,6 +452,55 @@ settings:
     section: "[/Script/PathOfTitans.IGameSession]"
   -
     subheader: "Nest Limits"
+    property: CharacterNestLimits=
+    label: Per-Species Nest Limits
+    type: character-nest-limits
+    repeatable: true
+    default: ""
+    fullWidth: true
+    helpText: "Override the egg cap for one species, and choose which species its nest is allowed to adopt. Add one row per creature. Leaving the allowed family tree empty restricts adoption to the same species only. This is a per-species override — the server-wide `Enable Same Species Adoption Restriction` setting still applies to any species without a row here. Creatures from the mods installed on this server are offered automatically."
+    section: "[/Script/PathOfTitans.IGameSession]"
+    options:
+      # ── Alderon default creatures ──
+      - Achillobator
+      - Albertaceratops
+      - Alioramus
+      - Allosaurus
+      - Amargasaurus
+      - Anodontosaurus
+      - Barsboldia
+      - Camptosaurus
+      - Ceratosaurus
+      - Concavenator
+      - Daspletosaurus
+      - Deinocheirus
+      - Deinonychus
+      - Eotriceratops
+      - Eurhinosaurus
+      - Hatzegopteryx
+      - Iguanodon
+      - Kaiwhekea
+      - Kentrosaurus
+      - Lambeosaurus
+      - Latenivenatrix
+      - Megalania
+      - Metriacanthosaurus
+      - Miragaia
+      - Pachycephalosaurus
+      - Pycnonemosaurus
+      - Rhamphorhynchus
+      - Sarcosuchus
+      - Spinosaurus
+      - Stegosaurus
+      - Struthiomimus
+      - Styracosaurus
+      - Suchomimus
+      - Thalassodromeus
+      - Tylosaurus
+      - Tyrannosaurus
+      - Tyrannotitan
+  -
+    subheader: "Nest Limits"
     property: bNestEggRegeneration=
     label: Enable Nest Egg Regeneration
     type: checkbox
