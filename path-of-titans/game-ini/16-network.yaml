@@ -48,6 +48,12 @@
 #              Used for sensitive values like passwords.
 #              Example: Server password, RCON password
 #
+#   string-list  A list of bare text values. The game repeats the key once
+#              per value ("Key=A" then "Key=B"), so this is NOT a comma-
+#              separated text field — using "text" for a repeated key makes
+#              the writer stamp one value over every existing line.
+#              Example: Disabled waystone tags, VPN-exempt Alderon IDs
+#
 # ─────────────────────────────────────────────
 name: Network Settings
 settings:

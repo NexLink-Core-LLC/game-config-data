@@ -1,0 +1,225 @@
+{
+  "_comment": [
+    "Waystone POI tags per map, for the Disabled Waystones picker in Game Settings.",
+    "",
+    "`key` is what Game.ini's ServerMap holds: the map name for Alderon's own maps,",
+    "and the mod SKU (as listed in map-mods.txt) for modded maps. The panel resolves",
+    "a modded server's ServerMap mount back to its SKU before looking a map up here.",
+    "",
+    "An EMPTY waystones array means the map genuinely has no waystones - that is a",
+    "real answer, not missing data, and the picker says so rather than falling back",
+    "to offering every other map's tags. A map absent from this list entirely is",
+    "unknown, and the picker then offers the full grouped list instead.",
+    "",
+    "Source: https://nexlinkcore.com/guides/path-of-titans/maps-info - captured",
+    "2026-09-20. The game's own /ListWaystones console command is the authoritative",
+    "source and should replace this file once a server with waystones enabled can be",
+    "read reliably; see the Path of Titans REST API note in the handbook.",
+    "",
+    "Tags are case-sensitive and must match the waystone's POI name exactly."
+  ],
+  "version": 1,
+  "maps": [
+    {
+      "key": "Gondwa",
+      "name": "Gondwa",
+      "waystones": [
+        "GoldenPlateau",
+        "TitansPass",
+        "SweetgrassShallows",
+        "FlyersBluff",
+        "SaltFlats",
+        "SanctuaryIsle",
+        "GreenValley",
+        "DarkWoods",
+        "KelpForest",
+        "SavannaGrassland",
+        "RainbowHills"
+      ]
+    },
+    {
+      "key": "Panjura",
+      "name": "Panjura",
+      "waystones": []
+    },
+    {
+      "key": "Riparia",
+      "name": "Riparia",
+      "waystones": [
+        "DryPeakWaystone",
+        "MireWaystone",
+        "IslandWaystone",
+        "SeasideWaystone",
+        "RedwoodPassageWaystone",
+        "SeacaveWaystone",
+        "RockfallWaystone",
+        "RedPeninsulaWaystone",
+        "OvergrownWaystone",
+        "SunkenWaystone",
+        "SandRingsWaystone",
+        "WhiterockWaystone"
+      ]
+    },
+    {
+      "key": "UGC_M_Y25EGM6EVZ_SK",
+      "name": "Arkon",
+      "waystones": ["CentralWaystone", "DesertWaystone"]
+    },
+    {
+      "key": "UGC_M_DYV7XD5EGX_SK",
+      "name": "Asylum Lounge",
+      "waystones": ["ChillZone", "RecreationZone", "KillZone"]
+    },
+    {
+      "key": "UGC_M_857Q88202V_SK",
+      "name": "Auralis Frontier",
+      "waystones": [
+        "GrazingGrounds",
+        "FrostbitePass",
+        "PinewoodSwamp",
+        "BlackMarshFalls",
+        "GreatValley",
+        "OceanSideHills",
+        "Ocean",
+        "RedwoodForest"
+      ]
+    },
+    {
+      "key": "UGC_M_YNR03ZY081_SK",
+      "name": "Beringia",
+      "waystones": [
+        "GoatsRunStone",
+        "EasternPlainsStone",
+        "FirnLakesStone",
+        "GullRidgeStone",
+        "FrozenHighlandsStone",
+        "BearsRidgeStone",
+        "LobsterBayStone",
+        "EverwinterStone",
+        "CapeOidaStone",
+        "HeatherDownsStone",
+        "BasinStone"
+      ]
+    },
+    {
+      "key": "UGC_M_NZK7J8Q712_SK",
+      "name": "Eyrie",
+      "_note": "SUSPECT - these are almost certainly DISPLAY NAMES, not POI tags. Eyrie's own Point of Interest list contains 'ArenaOfTheGiants' and 'WelcomeToEyrie', which look like the real tags for 'Giant Arena' and 'Welcome'. They also carry spaces, unlike every other map's camelCase. Verify with /ListWaystones before relying on these.",
+      "waystones": ["Giant Arena", "Aquatic Arena", "Land Arenas", "Welcome"]
+    },
+    {
+      "key": "UGC_M_6YJ72J1758_SK",
+      "name": "Kootenai Island",
+      "waystones": [
+        "IslandBay",
+        "SequoiaRidge",
+        "LandsEnd",
+        "SunkenStone",
+        "Skypoint",
+        "InnerBasin",
+        "OuterLake",
+        "BadWaterBeach"
+      ]
+    },
+    {
+      "key": "UGC_M_JG179QX7QN_SK",
+      "name": "Maplewood",
+      "waystones": [
+        "TwentyOneLake",
+        "KeppleLake",
+        "BeersLake",
+        "DeepHarbor",
+        "NorthLidaPlains",
+        "RiverNub",
+        "LidaIsle",
+        "SouthLida",
+        "Spoons",
+        "LargeInlet",
+        "GrassLoop",
+        "LonelyEnd",
+        "FiveSisters",
+        "BeersIsle",
+        "Taolunn",
+        "BeverLake",
+        "CowsSide",
+        "OutlandHills"
+      ]
+    },
+    {
+      "key": "UGC_M_YZKE4MK09W_SK",
+      "name": "Paragon",
+      "_note": "SUSPECT - verify before relying on this. Paragon's own Point of Interest list is just 'Paragon' and 'Paragon Arena', while 'DropoffLake' is a Panjura location. The guide pages resolve their tables from a live server query and were observed on 2026-09-20 returning another map's data (the HellsforgeCastle page listed Gondwa's POIs), so this entry may belong to a different map. Delete the entry entirely rather than guessing - an absent map reads as 'unknown' and offers the full grouped list, which is the honest answer.",
+      "waystones": ["DropoffLakeWaystone"]
+    },
+    {
+      "key": "UGC_M_QM57NW7D3P_SK",
+      "name": "Stoneclaw Highlands",
+      "waystones": ["StonehengeWaystone", "RockyFieldWaystone"]
+    },
+    {
+      "key": "UGC_M_K5GEZY57PN_SK",
+      "name": "Aqua Rage PVP",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_Y250G15EVZ_SK",
+      "name": "Arazoa Aquatica",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_W61E8Z40MD_SK",
+      "name": "Astra Island",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_RD1EPKZ0XG_SK",
+      "name": "Asylum Ranch",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_K5G0ZN10PN_SK",
+      "name": "Avernus",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_N597DNPEWQ_SK",
+      "name": "Etis",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_K5G0ZRY7PN_SK",
+      "name": "Hellsforge Castle",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_12GEWYX7WK_SK",
+      "name": "Mesozoic Desert",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_43G06350NR_SK",
+      "name": "New Era",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_5XN0VM20PZ_SK",
+      "name": "PrimalArena",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_RD1EPJ9EXG_SK",
+      "name": "Teutonia",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_DYV7XYEGX2_SK",
+      "name": "The Grim Expanse",
+      "waystones": []
+    },
+    {
+      "key": "UGC_M_YZKE4QY79W_SK",
+      "name": "Thornrun",
+      "waystones": []
+    }
+  ]
+}

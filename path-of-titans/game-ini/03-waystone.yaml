@@ -48,6 +48,12 @@
 #              Used for sensitive values like passwords.
 #              Example: Server password, RCON password
 #
+#   string-list  A list of bare text values. The game repeats the key once
+#              per value ("Key=A" then "Key=B"), so this is NOT a comma-
+#              separated text field — using "text" for a repeated key makes
+#              the writer stamp one value over every existing line.
+#              Example: Disabled waystone tags, VPN-exempt Alderon IDs
+#
 # ─────────────────────────────────────────────
 name: Waystone Settings
 settings:
@@ -70,6 +76,7 @@ settings:
     helpText: Enables or disables waystones. Setting this as false requires players
       to use the old method of using the Waystone by retuning to the Character
       Menu screen.
+    dependsOn: bServerWaystones
     section: "[/Script/PathOfTitans.IGameSession]"
   -
     subheader: ""
@@ -80,6 +87,7 @@ settings:
     default: true
     helpText: Enables or disables the ability for players to spend marks to
       insta-cooldown Waystones.
+    dependsOn: bServerWaystones
     section: "[/Script/PathOfTitans.IGameSession]"
   -
     subheader: ""
@@ -91,4 +99,22 @@ settings:
     default: -1
     helpText: Overrides the cooldown timer for Waystones in seconds. -1 will use the
       default cooldown timer.
+    dependsOn: bServerWaystones
+    section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: ""
+    property: ServerDisabledWaystones=
+    label: Disabled Waystones
+    type: string-list
+    repeatable: true
+    default: ""
+    fullWidth: true
+    helpText: "Switch off individual waystones while leaving the rest working. One
+      POI tag per entry, matching the waystone's own name — for example
+      `TitansPass` or `CentralWaystone`. Run `/ListWaystones` in the console to
+      see the tags this map uses. KNOWN GAME BUG: a player already holding the
+      `Restore Waystone` quest for a waystone disabled here is stuck with it and
+      cannot complete it. You may need to remove or complete that quest for them
+      by hand until Alderon fixes it."
+    dependsOn: bServerWaystones
     section: "[/Script/PathOfTitans.IGameSession]"
