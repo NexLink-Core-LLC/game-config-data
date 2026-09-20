@@ -106,7 +106,7 @@ settings:
     default: true
     helpText: If enabled, players will be allowed to change their dinosaur's subspecies.
     section: "[/Script/PathOfTitans.IGameSession]"
--
+  -
     subheader: "Connection Blocking"
     property: bServerBlockVPN=
     label: Block VPN Connections
