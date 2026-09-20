@@ -106,3 +106,50 @@ settings:
     default: true
     helpText: If enabled, players will be allowed to change their dinosaur's subspecies.
     section: "[/Script/PathOfTitans.IGameSession]"
+-
+    subheader: "Connection Blocking"
+    property: bServerBlockVPN=
+    label: Block VPN Connections
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: If `enabled`, players connecting through a known VPN are refused
+      entry to the server. Detection is Alderon's, not the panel's, so a
+      legitimate player on a corporate or privacy VPN can be caught by it — add
+      them to `VPN/Datacenter Exempt IDs` below rather than switching this off.
+    section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: "Connection Blocking"
+    property: bServerBlockDatacenter=
+    label: Block Datacenter Connections
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: If `enabled`, players connecting from a known datacenter IP range
+      are refused entry. Worth pairing with `Block VPN Connections`, since many
+      commercial VPNs exit through datacenter ranges.
+    section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: "Connection Blocking"
+    property: VPNExemptIds=
+    label: VPN/Datacenter Exempt IDs
+    type: string-list
+    repeatable: true
+    default: ""
+    fullWidth: true
+    helpText: Alderon IDs allowed in even when the VPN or datacenter blocks above
+      would otherwise refuse them. One ID per entry, in `123-456-789` form. Has
+      no effect while both blocks are off.
+    section: "[/Script/PathOfTitans.IGameSession]"
+  -
+    subheader: "Replays"
+    property: bHandleDedicatedServerReplays=
+    label: Enable Server-Side Replays
+    type: checkbox
+    repeatable: false
+    default: false
+    helpText: If `enabled`, the server records replays of its own, rather than
+      relying on players recording theirs. Separate from `Enable Replay
+      Recording`, which is the client-side setting, and written to a different
+      section of Game.ini. Alderon ships this as experimental.
+    section: "[/Game/Blueprints/GameModes/BP_GameMode_Sandbox.BP_GameMode_Sandbox_C]"
