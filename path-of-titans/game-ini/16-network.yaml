@@ -80,33 +80,6 @@ settings:
       option.
     section: "[/Script/PathOfTitans.IGameSession]"
   -
-    subheader: ""
-    property: bDisableGrouping=
-    label: Disable Grouping
-    type: checkbox
-    repeatable: false
-    default: false
-    helpText: If enabled, players will not be grouped together in the server.
-    section: "[/Script/PathOfTitans.IGameSession]"
-  -
-    subheader: ""
-    property: bServerCombatTimerAppliesToGroup=
-    label: Server Combat Timer Applies to Group
-    type: checkbox
-    repeatable: false
-    default: true
-    helpText: If enabled, the server combat timer will apply to all players in a group.
-    section: "[/Script/PathOfTitans.IGameSession]"
-  -
-    subheader: ""
-    property: bServerAllowChangeSubspecies=
-    label: Allow Change Subspecies
-    type: checkbox
-    repeatable: false
-    default: true
-    helpText: If enabled, players will be allowed to change their dinosaur's subspecies.
-    section: "[/Script/PathOfTitans.IGameSession]"
-  -
     subheader: "Connection Blocking"
     property: bServerBlockVPN=
     label: Block VPN Connections
